@@ -52,7 +52,6 @@
     "chromatic": "^11.20.0",
     "eslint-plugin-storybook": "^0.11.1",
     "prop-types": "^15.8.1",
-    "storybook": "^8.4.6",
     "webpack": "^5.96.1"
   }
 }
