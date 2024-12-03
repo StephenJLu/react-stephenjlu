@@ -6,7 +6,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chromaui/intro-storybook-react-template"
+    "url": "git+https://github.com/chromaui/intro-storybook-react-template.git"
   },
   "bugs": {
     "url": "https://github.com/chromaui/intro-storybook-react-template/issues"
@@ -14,8 +14,12 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@remix-run/node": "^2.15.0",
+    "@remix-run/react": "^2.15.0",
+    "@remix-run/serve": "^2.15.0",
+    "isbot": "^4.4.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "scripts": {
     "dev": "vite",
@@ -26,6 +30,8 @@
     "init-msw": "msw init public/"
   },
   "devDependencies": {
+    "@remix-run/dev": "^2.15.0",
+    "@storybook/addon-a11y": "^8.4.6",
     "@storybook/addon-essentials": "^8.3.2",
     "@storybook/addon-interactions": "^8.3.2",
     "@storybook/addon-links": "^8.3.2",
@@ -45,9 +51,12 @@
     "msw-storybook-addon": "^2.0.3",
     "prop-types": "^15.8.1",
     "storybook": "^8.3.2",
-    "vite": "^5.2.0"
+    "vite": "^5.4.11"
   },
   "resolutions": {
     "jackspeak": "2.1.1"
-  }
+  },
+  "main": "vite.config.js",
+  "keywords": [],
+  "homepage": "https://github.com/chromaui/intro-storybook-react-template#readme"
 }
