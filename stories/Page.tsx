@@ -9,7 +9,7 @@ export const Page: React.FC = () => {
     <article>
       <Header />
 
-      <section className="storybook-page">
+      <section className="storybook-page" data-bs-theme="light">
         <h2>Pages in Storybook</h2>
         <p>
           We recommend building UIs with a{' '}
