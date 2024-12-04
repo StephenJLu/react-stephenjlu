@@ -31,8 +31,9 @@ export const Default: Story = {
     { label: 'About', onClick: fn() },
     { label: 'Services', onClick: fn() },
     { label: 'Contact', onClick: fn() },
-  ],
+  ],  
   backgroundColor: '#000',
+    onSelect: (item) => console.log(`Selected: ${item.label}`),
 },
 
 };
