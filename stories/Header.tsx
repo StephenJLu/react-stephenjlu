@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import TextAnim from './components/TextAnim';
 import './header.css';
+import config from '../config.json';
 
 
 
@@ -9,7 +10,7 @@ export const Header = () => {
   const controls = useAnimation();
   const [scrollY, setScrollY] = useState(0);
   const [showTextAnim, setShowTextAnim] = useState(false);
-  
+  const baseText = config.name;
 
   const handleScroll = () => {
     setScrollY(window.scrollY);
@@ -50,7 +51,7 @@ export const Header = () => {
         />      
          {showTextAnim && (
           <h1 className="animated-text">
-            <TextAnim />
+            <TextAnim baseText={baseText} />
           </h1>
         )}
         </motion.div>      

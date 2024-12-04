@@ -470,6 +470,7 @@
     "wcwidth": "^1.0.1",
     "web-encoding": "^1.1.5",
     "web-streams-polyfill": "^3.3.3",
+    "webpack": "^5.97.0",
     "webpack-virtual-modules": "^0.6.2",
     "which": "^3.0.1",
     "which-typed-array": "^1.1.16",

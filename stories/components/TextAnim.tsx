@@ -2,9 +2,11 @@ import React from "react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useState } from "react";
 
+interface TextAnimProps {
+  baseText: string;
+}
 
-export default function TextAnim() {
-  const baseText = "Stephen J. Lu" as string;
+export default function TextAnim({ baseText }: TextAnimProps) {  
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));
   const displayText = useTransform(rounded, (latest) =>
@@ -14,7 +16,7 @@ export default function TextAnim() {
   useEffect(() => {
     const controls = animate(count, baseText.length, {
       type: "tween",
-      duration: 1,
+      duration: 2,
       ease: "easeInOut",
     });
     return controls.stop;
