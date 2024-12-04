@@ -9,7 +9,7 @@
   background-color: #000;
   font-family: 'Atlas Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-align: center;
-  z-index: 0;
+  z-index: 0; /* Ensure the header is above the background */
 }
 
 .header-background {
@@ -22,7 +22,7 @@
   background-size: cover;
   background-position: center;
   background-color: #000;
-  z-index: -1;
+  z-index: -1; /* Ensure the background is behind the content */
 }
 
 .storybook-header svg {
