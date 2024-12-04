@@ -12,7 +12,11 @@ export const Header = () => {
   const baseText = config.name;
 
   const handleScroll = () => {
-    setScrollY(window.scrollY);
+    const scrollPosition = window.scrollY;
+    const triggerPosition = window.innerHeight * 0.30; // 75vh
+    if (scrollPosition >= triggerPosition) {
+      setScrollY(scrollPosition);
+    }
   };
 
   useEffect(() => {
@@ -24,7 +28,7 @@ export const Header = () => {
 
   useEffect(() => {
     controls.start({
-      opacity: 1 - scrollY / 300, // Adjust the denominator to control the speed of the fade
+      opacity: 1 - (scrollY - window.innerHeight * 0.30) / 300, // Adjust the denominator to control the speed of the fade
     });
   }, [scrollY, controls]);
 
