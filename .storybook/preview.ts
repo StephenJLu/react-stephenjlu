@@ -1,4 +1,5 @@
 import '../styles/global.css';
+import '../fonts/fonts.css';
 import type { Preview } from "@storybook/react";
 
 const preview: Preview = {
