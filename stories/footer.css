@@ -1,0 +1,57 @@
+.storybook-footer {
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* Align content to the start (left) */
+  align-items: flex-end; /* Align content to the end (bottom) */
+  height: 25vh; /* Set height to 25vh */
+  background-color: #000; /* Set background color to black */
+  font-family: 'Atlas Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: center;
+  padding: 20px; /* Add padding */
+}
+
+.footer-content {
+  display: flex;
+  align-items: flex-end; /* Align content to the end (bottom) */
+  position: absolute;
+  bottom: 20px; /* Position 20px from the bottom */
+  left: 20px; /* Position 20px from the left */
+}
+
+.social-media-icons {
+  display: flex;
+  gap: 10px; /* Add space between icons */
+}
+
+.social-media-icons a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.social-media-icons svg {
+  width: 100%;
+  height: 100%;
+}
+
+.storybook-footer svg {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.storybook-footer h1 {
+  justify-content: center;
+  display: inline-block;
+  vertical-align: top;
+  margin: 6px 0 6px 10px;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.animated-text {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1.2; /* Ensure the line height is consistent */
+}

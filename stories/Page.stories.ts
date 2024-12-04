@@ -17,5 +17,4 @@ type Story = StoryObj<typeof meta>;
 
 export const HomePage: Story = {};
 
-// More on interaction testing: https://storybook.js.org/docs/writing-tests/interaction-testing
 
