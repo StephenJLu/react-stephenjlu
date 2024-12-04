@@ -2,6 +2,7 @@ import '../styles/global.css';
 import '../fonts/fonts.css';
 import '../styles/bootstrap.min.css';
 import type { Preview } from "@storybook/react";
+import { themes } from '@storybook/theming';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 
 export const decorators = [
@@ -10,13 +11,14 @@ export const decorators = [
       light: 'light',
       dark: 'dark',
     },
-    defaultTheme: 'light',
+    defaultTheme: 'dark',
     attributeName: 'data-bs-theme',
   }),
 ];
 
 const preview: Preview = {
   parameters: {
+    docs: { theme: themes.dark },
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       expanded: true,
