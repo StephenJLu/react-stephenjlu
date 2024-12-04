@@ -1,0 +1,1 @@
+import{R as e}from"./index-B-o1Wr-g.js";const o=()=>e.createElement("div",{className:"storybook-footer"},e.createElement("div",{className:"footer-content"}));o.__docgenInfo={description:"",methods:[],displayName:"Footer"};export{o as F};

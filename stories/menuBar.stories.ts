@@ -15,7 +15,12 @@ const meta = {
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
-  },  
+    activeItem: { 
+      control: 'select',
+    options: ['Home', 'About', 'Services', 'Contact'],
+  },
+},
+
 } satisfies Meta<typeof MenuBar>;
 
 export default meta;
@@ -24,15 +29,27 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 
 export const Default: Story = {
-
-    args:  {
+  args: {
     items: [
-    { label: 'Home', onClick: fn() },
-    { label: 'About', onClick: fn() },
-    { label: 'Services', onClick: fn() },
-    { label: 'Contact', onClick: fn() },
-  ],
-  backgroundColor: '#000',
+      { label: 'Home', onClick: fn() },
+      { label: 'About', onClick: fn() },
+      { label: 'Services', onClick: fn() },
+      { label: 'Contact', onClick: fn() },
+    ], 
+  backgroundColor: '#000',    
 },
 
+};
+
+export const Active: Story = {
+  args: {
+    items: [
+      { label: 'Home', onClick: fn() },
+      { label: 'About', onClick: fn() },
+      { label: 'Services', onClick: fn() },
+      { label: 'Contact', onClick: fn() },
+    ],
+    backgroundColor: "#000",
+    activeItem: "Home",      
+},
 };

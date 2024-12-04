@@ -32,6 +32,22 @@
   transition: background-color 0.3s ease;
 }
 
+.storybook-menu-bar__button.storybook-menu-bar__active {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  font-weight: 700;
+  /* Add subtle bottom border/indicator */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+  /* Match existing transition */
+  transition: all 0.3s ease;
+}
+
+  /* Ensure hover state doesn't override active state */
+.storybook-menu-bar__button.storybook-menu-bar__active:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+
 .storybook-menu-bar__button:hover {
   background-color: rgba(255, 255, 255, 0.75);
   color: #000;
