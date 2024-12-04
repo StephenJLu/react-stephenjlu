@@ -130,6 +130,7 @@
     "foreground-child": "^3.3.0",
     "format": "^0.2.2",
     "forwarded": "^0.2.0",
+    "framer-motion": "^11.13.1",
     "fresh": "^0.5.2",
     "fs-constants": "^1.0.0",
     "fs-extra": "^10.1.0",
