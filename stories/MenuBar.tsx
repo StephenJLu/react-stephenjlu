@@ -15,14 +15,16 @@ export interface MenuBarProps {
   backgroundColor?: string;
   /** Callback when a menu item is selected */
   onSelect?: (item: MenuItem) => void;
+  /** The currently active item */
+  activeItem?: string;
 }
 
 /** Primary UI component for navigation */
-export const MenuBar = ({ items, backgroundColor, onSelect }: MenuBarProps) => {
-  const [activeItem, setActiveItem] = useState<string | null>(null);
+export const MenuBar = ({ items, backgroundColor, onSelect, activeItem }: MenuBarProps) => {
+  const [localactiveItem, setLocalActiveItem] = useState<string | null>(activeItem || null);
 
   const handleClick = (item: MenuItem) => {
-    setActiveItem(item.label);
+    setLocalActiveItem(item.label);
     if (item.onClick) {
       item.onClick();
     }

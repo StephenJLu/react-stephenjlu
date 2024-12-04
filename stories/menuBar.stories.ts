@@ -15,7 +15,12 @@ const meta = {
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
-  },  
+    activeItem: { 
+      control: 'select',
+    options: ['Home', 'About', 'Services', 'Contact'],
+  },
+},
+
 } satisfies Meta<typeof MenuBar>;
 
 export default meta;
@@ -36,4 +41,21 @@ export const Default: Story = {
     onSelect: (item) => console.log(`Selected: ${item.label}`),
 },
 
+};
+
+export const Active: Story = {
+  args: {
+    items: [{
+      "label": "Home"
+    }, {
+      "label": "About"
+    }, {
+      "label": "Services"
+    }, {
+      "label": "Contact"
+    }],
+
+    backgroundColor: "#000",
+    activeItem: "Home"
+  }
 };
