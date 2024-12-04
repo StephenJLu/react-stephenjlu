@@ -16,7 +16,7 @@ export default function TextAnim({ baseText }: TextAnimProps) {
   useEffect(() => {
     const controls = animate(count, baseText.length, {
       type: "tween",
-      duration: 2,
+      duration: 1,
       ease: "easeInOut",
     });
     return controls.stop;

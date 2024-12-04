@@ -1,18 +1,3 @@
-@font-face {
-  font-family: 'Atlas Grotesk';
-  src: url('../fonts/AtlasGroteskLC-Black.ttf') format('truetype'),
-       url('../fonts/AtlasGroteskLC-BlackItalic.ttf') format('truetype'),
-       url('../fonts/AtlasGroteskLC-Bold.ttf') format('truetype'),
-       url('../fonts/AtlasGroteskLC-BoldItalic.ttf') format('truetype'),
-       url('../fonts/AtlasGroteskLC-Light.ttf') format('truetype'),
-       url('../fonts/AtlasGroteskLC-LightItalic.ttf') format('truetype'),
-       url('../fonts/AtlasGroteskLC-Medium.ttf') format('truetype'),
-       url('../fonts/AtlasGroteskLC-MediumItalic.ttf') format('truetype'),
-       url('../fonts/AtlasGroteskLC-Regular.ttf') format('truetype'),
-       url('../fonts/AtlasGroteskLC-RegularItalic.ttf') format('truetype'),
-       url('../fonts/AtlasGroteskLC-Thin.ttf') format('truetype'),
-       url('../fonts/AtlasGroteskLC-ThinItalic.ttf') format('truetype')    }
-
 .storybook-page {
   margin: 0 auto;
   padding: 48px 20px;

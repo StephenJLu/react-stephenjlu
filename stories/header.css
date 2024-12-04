@@ -2,13 +2,14 @@
 .storybook-header {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #000;
   font-family: 'Atlas Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-align: center;
-  z-index: -1;
+  z-index: 0;
 }
 
 .header-background {
@@ -31,9 +32,8 @@
 
 .storybook-header h1 {
   justify-content: center;
-  display: inline-block;
-  vertical-align: top;
-  margin: 6px 0 6px 10px;
+  display: inline-block;  
+  margin: 6px 0 75px 10px;
   font-weight: 700;
   font-size: 50px;
   line-height: 1.2;
@@ -41,7 +41,13 @@
 }
 
 .animated-text {
-  display: inline-block;
-  vertical-align: top;
+  display: block;
+  margin-bottom: 20px;
   line-height: 1.2; /* Ensure the line height is consistent */
+}
+
+.menu-bar-container {   
+  display: flex; /* Ensure the menu bar container is a flex container */
+  justify-content: center; /* Center the menu bar */
+  margin-top: 20px; /* Add some space above the menu bar */
 }
