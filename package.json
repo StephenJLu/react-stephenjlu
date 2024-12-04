@@ -50,7 +50,6 @@
     "check-error": "^2.1.1",
     "chokidar": "^3.6.0",
     "chownr": "^2.0.0",
-    "chromatic": "^11.20.0",
     "clean-stack": "^2.2.0",
     "cli-cursor": "^3.1.0",
     "cli-spinners": "^2.9.2",
@@ -493,12 +492,14 @@
     "@storybook/react": "^8.4.6",
     "@storybook/react-vite": "^8.4.6",
     "@storybook/test": "^8.4.6",
+    "chromatic": "^11.20.0",
     "storybook": "^8.4.6"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_c44f22f16f0da96"
   },
   "keywords": [],
   "author": "",
