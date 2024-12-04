@@ -32,7 +32,7 @@ export const Default: Story = {
     { label: 'Services', onClick: fn() },
     { label: 'Contact', onClick: fn() },
   ],
-  backgroundColor: '#1ea7fd',
+  backgroundColor: '#000',
 },
 
 };
