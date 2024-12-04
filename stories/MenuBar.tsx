@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './menuBar.css';
 
 export interface MenuItem {
@@ -22,6 +22,10 @@ export interface MenuBarProps {
 /** Primary UI component for navigation */
 export const MenuBar = ({ items, backgroundColor, onSelect, activeItem }: MenuBarProps) => {
   const [localactiveItem, setLocalActiveItem] = useState<string | null>(activeItem || null);
+
+  useEffect(() => {
+    setLocalActiveItem(activeItem || null);
+  }, [activeItem]);
 
   const handleClick = (item: MenuItem) => {
     setLocalActiveItem(item.label);

@@ -29,33 +29,27 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 
 export const Default: Story = {
-
-    args:  {
+  args: {
     items: [
-    { label: 'Home', onClick: fn() },
-    { label: 'About', onClick: fn() },
-    { label: 'Services', onClick: fn() },
-    { label: 'Contact', onClick: fn() },
-  ],  
-  backgroundColor: '#000',
-    onSelect: (item) => console.log(`Selected: ${item.label}`),
+      { label: 'Home', onClick: fn() },
+      { label: 'About', onClick: fn() },
+      { label: 'Services', onClick: fn() },
+      { label: 'Contact', onClick: fn() },
+    ], 
+  backgroundColor: '#000',    
 },
 
 };
 
 export const Active: Story = {
   args: {
-    items: [{
-      "label": "Home"
-    }, {
-      "label": "About"
-    }, {
-      "label": "Services"
-    }, {
-      "label": "Contact"
-    }],
-
+    items: [
+      { label: 'Home', onClick: fn() },
+      { label: 'About', onClick: fn() },
+      { label: 'Services', onClick: fn() },
+      { label: 'Contact', onClick: fn() },
+    ],
     backgroundColor: "#000",
-    activeItem: "Home"
-  }
+    activeItem: "Home",      
+},
 };
