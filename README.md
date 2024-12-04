@@ -1,6 +1,6 @@
 ## Web URL 🌎
 
-[Pre-release Storybook](https://main--674fc273d2b543f7261912fa.chromatic.com/)
+[Pre-release Storybook](https://storybook.stephenjlu.com/)
 
 ## Changelog 📆
 
