@@ -13,6 +13,7 @@ December 3, 2024 - v0.1.1
 ## Languages Used 💻
 
 - TypeScript
+- CSS
 
 ## Libraries Used 📖
 
