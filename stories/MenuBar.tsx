@@ -42,7 +42,7 @@ export const MenuBar = ({ items, backgroundColor, onSelect, activeItem }: MenuBa
               type="button"
               onClick={() => handleClick(item)}
               className={`storybook-menu-bar__button ${
-                activeItem === item.label ? 'storybook-menu-bar__active' : ''
+                localactiveItem === item.label ? 'storybook-menu-bar__active' : ''
               }`}
             >
               {item.label}
