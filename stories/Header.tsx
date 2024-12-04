@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import TextAnim from './components/TextAnim';
 import './header.css';
+
+
 
 export const Header = () => {
   const controls = useAnimation();
   const [scrollY, setScrollY] = useState(0);
+  const [showTextAnim, setShowTextAnim] = useState(false);
+  
 
   const handleScroll = () => {
     setScrollY(window.scrollY);
@@ -23,6 +28,13 @@ export const Header = () => {
     });
   }, [scrollY, controls]);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowTextAnim(true);
+    }, 2000); // Delay of 2 seconds
+    return () => clearTimeout(timer);
+  }, []);  
+
   return (
     <header>
       <motion.div
@@ -30,10 +42,18 @@ export const Header = () => {
         animate={controls}
         initial={{ opacity: 1 }}
       >
-        <div>
-          <h1>Stephen J. Lu</h1>
-        </div>
-      </motion.div>
+        <motion.div
+          className="header-background"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.45 }}
+          transition={{ delay: 1, duration: 1 }}
+        />      
+         {showTextAnim && (
+          <h1 className="animated-text">
+            <TextAnim />
+          </h1>
+        )}
+        </motion.div>      
     </header>
   );
 };

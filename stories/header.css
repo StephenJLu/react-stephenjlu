@@ -26,8 +26,7 @@
   z-index: -1;
 }
 
-.storybook-header::before {
-  content: '';
+.header-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -37,7 +36,6 @@
   background-size: cover;
   background-position: center;
   background-color: #000;
-  opacity: 0.65;
   z-index: -1;
 }
 
@@ -53,13 +51,12 @@
   margin: 6px 0 6px 10px;
   font-weight: 700;
   font-size: 50px;
-  line-height: 1;
+  line-height: 1.2;
   color: #fff;
 }
 
-
-.storybook-header .welcome {
-  margin-right: 10px;
-  color: #333;
-  font-size: 14px;
+.animated-text {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1.2; /* Ensure the line height is consistent */
 }
