@@ -8,6 +8,6 @@ export default create({
   brandImage: 'https://www.stephenjlu.com/images/SJL-logo.svg',
   brandTarget: '_blank',
 
-  fontBase: '"Atlas Grotesk", sans-serif',
+  fontBase: '"AtlasGroteskLC", sans-serif',
   fontCode: 'monospace',
 });
