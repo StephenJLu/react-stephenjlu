@@ -1,10 +1,12 @@
+@import url('../styles/fonts.css');
+
 .storybook-menu-bar {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
   color: white;
-  font-family: 'Atlas Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'AtlasGroteskLC', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   border-radius: 30px;
 }
 
