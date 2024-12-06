@@ -52,3 +52,14 @@
   z-index: 1; /* Ensure it is above other content */
   transition: width 0.3s ease; /* Add transition for width */
 }
+
+.menu-bar-container.sticky {  
+  position: fixed;   /* Stick to the top of the viewport */
+  top: 0;
+  left: 50%;
+  bottom: auto;   /* Reset bottom */
+  transform: translateX(-50%);   
+  width: 100vw;
+  border-radius: 0; /* Full width */  
+  transition: all 0.3s ease;
+}

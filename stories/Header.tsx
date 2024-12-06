@@ -8,8 +8,10 @@ import { MenuBar } from "./MenuBar";
 export const Header = () => {
   const [showTextAnim, setShowTextAnim] = useState(false);
   const [menuBarWidth, setMenuBarWidth] = useState('auto');
+  const [isSticky, setIsSticky] = useState(false);
   const baseText = config.name;
   const headerRef = useRef<HTMLDivElement>(null);
+  const menuBarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -39,8 +41,17 @@ export const Header = () => {
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    const newWidth = Math.min(100, (scrollPosition / maxScroll) * 100);
+    const newWidth = Math.min(100, (scrollPosition / maxScroll) * 150 + 30);
     setMenuBarWidth(`${newWidth}vw`);
+
+    if (menuBarRef.current) {
+      const menuBarTop = menuBarRef.current.getBoundingClientRect().top;
+      if (menuBarTop <= 0) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    }
   };
 
   useEffect(() => {
@@ -64,7 +75,7 @@ export const Header = () => {
             <TextAnim baseText={baseText} trigger={showTextAnim} />
           </h1>
         )}
-        <div className="menu-bar-container" style={{ width: menuBarWidth }}>
+        <div className={`menu-bar-container ${isSticky ? 'sticky' : ''}`} ref={menuBarRef} style={{ width: menuBarWidth }}>
           <MenuBar items={menuItems} backgroundColor="#000" />
         </div>
       </div>
