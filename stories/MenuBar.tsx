@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import '../styles/global.css';
 import './menuBar.css';
 
@@ -21,8 +21,34 @@ export interface MenuBarProps {
 }
 
 /** Primary UI component for navigation */
-export const MenuBar = ({ items, backgroundColor, onSelect, activeItem }: MenuBarProps) => {
+export const MenuBar: React.FC<MenuBarProps> = ({ items, backgroundColor, onSelect, activeItem }) => {
+  const [menuBarWidth, setMenuBarWidth] = useState('auto');
+  const [isSticky, setIsSticky] = useState(false);
+  const menuBarRef = useRef<HTMLDivElement>(null);
   const [localactiveItem, setLocalActiveItem] = useState<string | null>(activeItem || null);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const newWidth = Math.min(98, (scrollPosition / maxScroll) * 150 + 30);
+    setMenuBarWidth(`${newWidth}vw`);
+
+    if (menuBarRef.current) {
+      const menuBarTop = menuBarRef.current.getBoundingClientRect().top;
+      if (menuBarTop <= 0) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     setLocalActiveItem(activeItem || null);
@@ -39,7 +65,14 @@ export const MenuBar = ({ items, backgroundColor, onSelect, activeItem }: MenuBa
   };
 
   return (
-    <nav className="storybook-menu-bar" style={{ backgroundColor }}>
+    <div className={`menu-bar-container ${isSticky ? 'sticky' : ''}`}
+      ref={menuBarRef}
+      style={{ width: menuBarWidth }}
+      >
+    <nav 
+    className={"storybook-menu-bar"}    
+    style={{ backgroundColor }}
+    >      
       <ul className="storybook-menu-bar__list">
         {items.map((item, index) => (
           <li key={index} className="storybook-menu-bar__item">
@@ -54,7 +87,8 @@ export const MenuBar = ({ items, backgroundColor, onSelect, activeItem }: MenuBa
             </button>
           </li>
         ))}
-      </ul>
+      </ul>      
     </nav>
+    </div>
   );
 };

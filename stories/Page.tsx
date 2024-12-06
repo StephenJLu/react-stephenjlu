@@ -1,12 +1,22 @@
 import React from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';// Import the SocialMediaIcons component
+import { MenuBar } from "./MenuBar";
 import '../styles/global.css';
 import './page.css';
+import config from "../config.json";
 
-export const Page: React.FC = () => {
-  return (
+
+export const Page: React.FC = () => {      
+  const baseText = config.name;
+  const menuItems = config.menuItems.map((item) => ({
+    ...item,
+    onClick: () => eval(item.onClick)
+  }));
+  
+  return (    
     <article>
+      <MenuBar items={menuItems} backgroundColor="#000" />
       <Header />
 
       <section className="storybook-page" data-bs-theme="light">
