@@ -1,4 +1,3 @@
-
 .storybook-header {
   position: relative;
   display: flex;
@@ -7,9 +6,8 @@
   align-items: center;
   height: 100vh;
   background-color: #000;
-  font-family: 'AtlasGroteskLC', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-align: center;
-  z-index: 0; /* Ensure the header is above the background */
+  z-index: 0;
 }
 
 .header-background {
@@ -19,10 +17,11 @@
   width: 100%;
   height: 100%;
   background-image: url('../static/images/san-diego.svg');
+  opacity: 0.45;
   background-size: cover;
   background-position: center;
   background-color: #000;
-  z-index: -1; /* Ensure the background is behind the content */
+  z-index: -1;
 }
 
 .storybook-header svg {
@@ -32,22 +31,47 @@
 
 .storybook-header h1 {
   justify-content: center;
-  display: inline-block;  
-  margin: 6px 0 75px 10px;
+  position: relative; 
+  padding: 10px;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 3rem;
   line-height: 1.2;
   color: #fff;
+  width: 100%; 
+  height: 100px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.animated-text {
-  display: block;
-  margin-bottom: 20px;
-  line-height: 1.2; /* Ensure the line height is consistent */
+@media (max-width: 600px) {
+  .storybook-header h1 {
+    font-size: 2.5rem; /* Adjust the font-size for mobile devices */
+  }
 }
 
-.menu-bar-container {   
-  display: flex; /* Ensure the menu bar container is a flex container */
-  justify-content: center; /* Center the menu bar */
-  margin-top: 20px; /* Add some space above the menu bar */
+.menu-bar-container {
+  position: absolute; 
+  bottom: 50px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 30px;
+  z-index: 1;
+  transition: width 0.3s ease;
+}
+
+.menu-bar-container.sticky {  
+  position: fixed;
+  top: 0;
+  left: 50%;
+  bottom: auto;
+  transform: translateX(-50%);
+  width: 100vw;
+  margin: 0;
+  border-radius: 30px;
+  transition: all 0.3s ease;
 }

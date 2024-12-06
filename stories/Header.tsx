@@ -1,21 +1,31 @@
-import React, { useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import React, { useEffect, useState, useRef } from "react";
 import TextAnim from "./components/TextAnim";
+import TextFade from "./components/TextFade";
+import '../styles/global.css';
 import "./header.css";
 import config from "../config.json";
 import { MenuBar } from "./MenuBar";
 
-export const Header = () => {
-  const controls = useAnimation();
-  const [scrollY, setScrollY] = useState(0);
-  const [showTextAnim, setShowTextAnim] = useState(false);
+export const Header = () => {  
+  const [menuBarWidth, setMenuBarWidth] = useState('auto');
+  const [isSticky, setIsSticky] = useState(false);
   const baseText = config.name;
+  const headerRef = useRef<HTMLDivElement>(null);
+  const menuBarRef = useRef<HTMLDivElement>(null);  
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    const triggerPosition = window.innerHeight * 0.30; // 75vh
-    if (scrollPosition >= triggerPosition) {
-      setScrollY(scrollPosition);
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const newWidth = Math.min(98, (scrollPosition / maxScroll) * 150 + 30);
+    setMenuBarWidth(`${newWidth}vw`);
+
+    if (menuBarRef.current) {
+      const menuBarTop = menuBarRef.current.getBoundingClientRect().top;
+      if (menuBarTop <= 0) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
     }
   };
 
@@ -26,55 +36,26 @@ export const Header = () => {
     };
   }, []);
 
-  useEffect(() => {
-    controls.start({
-      opacity: 1 - (scrollY - window.innerHeight * 0.30) / 300, // Adjust the denominator to control the speed of the fade
-    });
-  }, [scrollY, controls]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowTextAnim(true);
-    }, 2000); // Delay of 2 seconds
-    return () => clearTimeout(timer);
-  }, []);
-
-  const menuItems = [
-    { label: "Home", onClick: () => console.log("Home clicked") },
-    { label: "About", onClick: () => console.log("About clicked") },
-    { label: "Ledger", onClick: () => console.log("Ledger clicked") },
-    { label: "Gallery", onClick: () => console.log("Gallery clicked") },
-    { label: "Contact", onClick: () => console.log("Contact clicked") },
-  ];
+  const menuItems = config.menuItems.map((item) => ({
+    ...item,
+    onClick: () => eval(item.onClick)
+  }));
 
   return (
-    <header>
-      <motion.div
-        className="storybook-header"
-        animate={controls}
-        initial={{ opacity: 1 }}
-      >
-        <motion.div
-          className="header-background"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.45 }}
-          transition={{ delay: 1, duration: 1 }}
-        />
-        {showTextAnim && (
-          <h1 className="animated-text">
-            <TextAnim baseText={baseText} />
-          </h1>
-        )}
- 
-<motion.div
-        className="menu-bar-container"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 3, duration: 1 }} // Fade in at 3 seconds
-      >       
-          <MenuBar items={menuItems} backgroundColor="#000" />        
-      </motion.div>
-      </motion.div>
+    <header ref={headerRef}>      
+      <div className="storybook-header">
+        <div className="header-background" />
+        <h1 className="animated-text">
+          <TextAnim baseText={baseText} />
+        </h1>
+        <TextFade>
+        <span className="subtitle">Author of <em>CSI to CEO</em><br />Retired CSI and Forensic Firearms Examiner
+        <br />EMBA | SHRM-CP | Phi Beta Kappa</span>
+        </TextFade>
+        <div className={`menu-bar-container ${isSticky ? 'sticky' : ''}`} ref={menuBarRef} style={{ width: menuBarWidth }}>
+          <MenuBar items={menuItems} backgroundColor="#000" />
+        </div>
+      </div>
     </header>
   );
 };

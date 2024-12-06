@@ -1,0 +1,5 @@
+.animated-text {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1; /* Ensure the line height is consistent */
+}
