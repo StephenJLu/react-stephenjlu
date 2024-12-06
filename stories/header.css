@@ -21,7 +21,7 @@
   background-image: url('../static/images/san-diego.svg');
   opacity: 0.45;
   background-size: cover;
-  background-position: center;
+  background-position: top middle;
   background-color: #000;
   z-index: -1;
 }

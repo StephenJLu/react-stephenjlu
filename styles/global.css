@@ -141,8 +141,7 @@
 @media (max-width: 600px) {
   h1 {
     font-size: 2rem; /* Adjust the font-size for mobile devices */
-  }
-  
+  }  
   .subtitle {
     font-size: 1rem;
   }

@@ -1,4 +1,4 @@
-@import url("../styles/global.css");
+@import url("../../styles/global.css");
 
 .text-fade {
   opacity: 0; /* Initially hidden */

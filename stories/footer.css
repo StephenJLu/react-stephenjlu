@@ -16,7 +16,8 @@
   display: flex;
   align-items: flex-end; /* Align content to the end (bottom) */
   position: absolute;
-  bottom: 20px;  
+  bottom: 20px; 
+  font-size: 0.6rem; 
 }
 
 .storybook-footer svg {
