@@ -1,47 +1,22 @@
 import React, { useEffect, useState, useRef } from "react";
 import TextAnim from "./components/TextAnim";
+import TextFade from "./components/TextFade";
 import '../styles/global.css';
 import "./header.css";
 import config from "../config.json";
 import { MenuBar } from "./MenuBar";
 
-export const Header = () => {
-  const [showTextAnim, setShowTextAnim] = useState(false);
+export const Header = () => {  
   const [menuBarWidth, setMenuBarWidth] = useState('auto');
   const [isSticky, setIsSticky] = useState(false);
   const baseText = config.name;
   const headerRef = useRef<HTMLDivElement>(null);
-  const menuBarRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              setShowTextAnim(true);
-            }, 1000); // Delay of 1 second
-          }
-        });
-      },
-      { threshold: 0.1 } // Trigger when 10% of the element is visible
-    );
-
-    if (headerRef.current) {
-      observer.observe(headerRef.current);
-    }
-
-    return () => {
-      if (headerRef.current) {
-        observer.unobserve(headerRef.current);
-      }
-    };
-  }, []);
+  const menuBarRef = useRef<HTMLDivElement>(null);  
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    const newWidth = Math.min(100, (scrollPosition / maxScroll) * 150 + 30);
+    const newWidth = Math.min(98, (scrollPosition / maxScroll) * 150 + 30);
     setMenuBarWidth(`${newWidth}vw`);
 
     if (menuBarRef.current) {
@@ -67,14 +42,16 @@ export const Header = () => {
   }));
 
   return (
-    <header ref={headerRef}>
+    <header ref={headerRef}>      
       <div className="storybook-header">
         <div className="header-background" />
-        {showTextAnim && (
-          <h1 className="animated-text">
-            <TextAnim baseText={baseText} trigger={showTextAnim} />
-          </h1>         
-        )}
+        <h1 className="animated-text">
+          <TextAnim baseText={baseText} />
+        </h1>
+        <TextFade>
+        <span className="subtitle">Author of <em>CSI to CEO</em><br />Retired CSI and Forensic Firearms Examiner
+        <br />EMBA | SHRM-CP | Phi Beta Kappa</span>
+        </TextFade>
         <div className={`menu-bar-container ${isSticky ? 'sticky' : ''}`} ref={menuBarRef} style={{ width: menuBarWidth }}>
           <MenuBar items={menuItems} backgroundColor="#000" />
         </div>
