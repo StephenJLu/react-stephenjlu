@@ -6,19 +6,23 @@ import "./header.css";
 import config from "../config.json";
 
 export const Header = () => {    
-  const baseText = config.name; 
+  const typeText = config.name;
+  const fadeText1 = 'Author of CSI to CEO';
+  const fadeText2 = 'Retired CSI and Forensic Firearms Examiner';
+  const fadeText3 = 'EMBA | SHRM-CP | Phi Beta Kappa';
 
   return (
     <header>      
       <div className="storybook-header">
         <div className="header-background" />
         <h1 className="animated-text">
-          <TextAnim baseText={baseText} />
-        </h1>
-        <TextFade>
-        <span className="subtitle">Author of <em>CSI to CEO</em><br />Retired CSI and Forensic Firearms Examiner
-        <br />EMBA | SHRM-CP | Phi Beta Kappa</span>
-        </TextFade>        
+          <TextAnim typeText={typeText} />
+        </h1>        
+        <span className="subtitle">
+          <TextFade fadeText={fadeText1} /><br />
+          <TextFade fadeText={fadeText2} /><br />
+          <TextFade fadeText={fadeText3} /><br />
+          </span>                
         </div>      
     </header>
   );

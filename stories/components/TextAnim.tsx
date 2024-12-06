@@ -3,10 +3,10 @@ import { animate } from 'framer-motion';
 import './textAnim.css';
 
 interface TextAnimProps {
-  baseText: string;
+  typeText: string;
 }
 
-const TextAnim: React.FC<TextAnimProps> = ({ baseText }) => {
+const TextAnim: React.FC<TextAnimProps> = ({ typeText }) => {
   const [count, setCount] = useState(0);
   const [showText, setShowText] = useState(false);
   const textRef = useRef<HTMLSpanElement>(null);
@@ -40,9 +40,9 @@ const TextAnim: React.FC<TextAnimProps> = ({ baseText }) => {
 
   useEffect(() => {
     if (showText) {
-      const duration = baseText.length * 0.1; // Example: 0.1 seconds per character
+      const duration = typeText.length * 0.1; // Example: 0.1 seconds per character
 
-      const controls = animate(count, baseText.length, {
+      const controls = animate(count, typeText.length, {
         type: 'tween',
         duration: duration,
         ease: 'easeInOut',
@@ -51,9 +51,9 @@ const TextAnim: React.FC<TextAnimProps> = ({ baseText }) => {
 
       return () => controls.stop();
     }
-  }, [showText, baseText]);
+  }, [showText, typeText]);
 
-  return <span ref={textRef}>{baseText.slice(0, count)}</span>;
+  return <span ref={textRef}>{typeText.slice(0, count)}</span>;
 };
 
 export default TextAnim;

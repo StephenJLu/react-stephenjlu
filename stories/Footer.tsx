@@ -9,7 +9,7 @@ export const Footer = () => {
     <div className="storybook-footer">
       <div className="footer-content">
         <span className="date animated-text">
-          <TextAnim baseText={`© ${new Date().getFullYear()} ${config.name}. All rights reserved.`} />            
+          <TextAnim typeText={`© ${new Date().getFullYear()} ${config.name}. All rights reserved.`} />            
           </span>        
       </div>
     </div>

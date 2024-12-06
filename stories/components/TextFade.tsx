@@ -2,11 +2,11 @@ import React, { useEffect, useState, useRef } from 'react';
 import './textFade.css';
 
 interface TextFadeProps {
-  children: React.ReactNode;
+  fadeText: string;
   delay?: number; // Optional delay in milliseconds
 }
 
-const TextFade: React.FC<TextFadeProps> = ({ children, delay = 2000 }) => {
+const TextFade: React.FC<TextFadeProps> = ({ fadeText, delay = 2000 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const textRef = useRef<HTMLSpanElement>(null);
 
@@ -39,7 +39,7 @@ const TextFade: React.FC<TextFadeProps> = ({ children, delay = 2000 }) => {
 
   return (
     <span ref={textRef} className={`text-fade ${isVisible ? 'visible' : ''}`}>
-      {children}
+      {fadeText}
     </span>
   );
 };
