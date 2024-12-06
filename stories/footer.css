@@ -1,7 +1,8 @@
 .storybook-footer {
   position: relative;
   display: flex;
-  justify-content: flex-start; /* Align content to the start (left) */
+  color: var(--bs-gray-300);
+  justify-content: center; /* Align content to the start (left) */
   align-items: flex-end; /* Align content to the end (bottom) */
   height: 25vh; /* Set height to 25vh */
   background-color: #000; /* Set background color to black */
@@ -13,8 +14,7 @@
   display: flex;
   align-items: flex-end; /* Align content to the end (bottom) */
   position: absolute;
-  bottom: 20px; /* Position 20px from the bottom */
-  left: 20px; /* Position 20px from the left */
+  bottom: 20px;  
 }
 
 .social-media-icons {
@@ -52,28 +52,15 @@
 .animated-text {
   display: inline-block;
   vertical-align: top;
-  line-height: 1.2; /* Ensure the line height is consistent */
+  line-height: 1; /* Ensure the line height is consistent */
 }
-  .footer {
-    --lineHeightBody: 1.1;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: center;
-    width: 100vw;
-    padding: var(--space3XL) var(--spaceL);
-    z-index: var(--zIndex2);
-    position: relative;
-    color: var(--textLight);
-  }
+  
 
   .link {
     display: inline-flex;
   }
 
-  .date {
-    padding-right: var(--spaceXS);
+  .date {    
     display: inline-flex;
   }
 

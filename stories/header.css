@@ -17,6 +17,7 @@
   width: 100%;
   height: 100%;
   background-image: url('../static/images/san-diego.svg');
+  opacity: 0.45;
   background-size: cover;
   background-position: center;
   background-color: #000;
@@ -38,14 +39,16 @@
   color: #fff;
 }
 
-.animated-text {
-  display: block;
-  margin-bottom: 20px;
-  line-height: 1.2; /* Ensure the line height is consistent */
-}
-
-.menu-bar-container {   
+.menu-bar-container {
+  position: absolute; /* Fixed position */
+  bottom: 100px; /* 20px from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  width: auto; /* Adjust width as needed */
   display: flex; /* Ensure the menu bar container is a flex container */
   justify-content: center; /* Center the menu bar */
-  margin-top: 20px; /* Add some space above the menu bar */
+  padding: 10px 20px; /* Add some padding */
+  background-color: none; /* Semi-transparent background */
+  border-radius: 30px; /* Rounded corners */
+  z-index: 1; /* Ensure it is above other content */
 }
