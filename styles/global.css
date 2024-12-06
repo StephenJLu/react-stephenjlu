@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "AtlasGroteskLC";
+  src: url("../fonts/AtlasGroteskLC-Thin.ttf");
+  src: local("AtlasGroteskLC Thin"), local("AtlasGroteskLC-Thin"),
+    url("../fonts/AtlasGroteskLC-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AtlasGroteskLC";
+  src: url("../fonts/AtlasGroteskLC-Light.ttf");
+  src: local("AtlasGroteskLC Light"), local("AtlasGroteskLC-Light"),
+    url("../fonts/AtlasGroteskLC-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AtlasGroteskLC";
+  src: url("../fonts/AtlasGroteskLC-Regular.ttf");
+  src: local("AtlasGroteskLC Regular"), local("AtlasGroteskLC-Regular"),
+    url("../fonts/AtlasGroteskLC-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AtlasGroteskLC";
+  src: url("../fonts/AtlasGroteskLC-Medium.ttf");
+  src: local("AtlasGroteskLC Medium"), local("AtlasGroteskLC-Medium"),
+    url("../fonts/AtlasGroteskLC-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AtlasGroteskLC";
+  src: url("../fonts/AtlasGroteskLC-Bold.ttf");
+  src: local("AtlasGroteskLC Bold"), local("AtlasGroteskLC-Bold"),
+    url("../fonts/AtlasGroteskLC-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AtlasGroteskLC";
+  src: url("../fonts/AtlasGroteskLC-Black.ttf");
+  src: local("AtlasGroteskLC Black"), local("AtlasGroteskLC-Black"),
+    url("../fonts/AtlasGroteskLC-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AtlasGroteskLC";
+  src: url("../fonts/AtlasGroteskLC-ThinItalic.ttf");
+  src: local("AtlasGroteskLC-ThinItalic"), local("AtlasGroteskLC-ThinItalic"),
+    url("../fonts/AtlasGroteskLC-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "AtlasGroteskLC";
+  src: url("../fonts/AtlasGroteskLC-LightItalic.ttf");
+  src: local("AtlasGroteskLC LightItalic"), local("AtlasGroteskLC-LightItalic"),
+    url("../fonts/AtlasGroteskLC-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "AtlasGroteskLC";
+  src: url("../fonts/AtlasGroteskLC-RegularItalic.ttf");
+  src: local("AtlasGroteskLC-RegularItalic"), local("AtlasGroteskLC-RegularItalic"),
+    url("../fonts/AtlasGroteskLC-RegularItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "AtlasGroteskLC";
+  src: url("../fonts/AtlasGroteskLC-MediumItalic.ttf");
+  src: local("AtlasGroteskLC-MediumItalic"), local("AtlasGroteskLC-MediumItalic"),
+    url("../fonts/AtlasGroteskLC-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "AtlasGroteskLC";
+  src: url("../fonts/AtlasGroteskLC-BoldItalic.ttf");
+  src: local("AtlasGroteskLC-BoldItalic"), local("AtlasGroteskLC-BoldItalic"),
+    url("../fonts/AtlasGroteskLC-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "AtlasGroteskLC";
+  src: url("../fonts/AtlasGroteskLC-BlackItalic.ttf");
+  src: local("AtlasGroteskLC-BlackItalic"), local("AtlasGroteskLC-BlackItalic"),
+    url("../fonts/AtlasGroteskLC-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
-
 import { Header } from './Header';
 import { Footer } from './Footer';// Import the SocialMediaIcons component
+import '../styles/global.css';
 import './page.css';
 
 export const Page: React.FC = () => {

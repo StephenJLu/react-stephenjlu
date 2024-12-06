@@ -1,5 +1,4 @@
 import '../styles/global.css';
-import '../fonts/fonts.css';
 import '../styles/bootstrap.min.css';
 import type { Preview } from "@storybook/react";
 

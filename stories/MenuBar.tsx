@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '../styles/global.css';
 import './menuBar.css';
 
 export interface MenuItem {

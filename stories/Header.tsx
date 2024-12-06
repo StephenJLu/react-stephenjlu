@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import TextAnim from "./components/TextAnim";
+import '../styles/global.css';
 import "./header.css";
 import config from "../config.json";
 import { MenuBar } from "./MenuBar";

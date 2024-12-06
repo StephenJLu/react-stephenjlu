@@ -5,8 +5,7 @@
   color: var(--bs-body-color);
   background-color: var(--bs-body-bg);
   font-size: 14px;
-  line-height: 24px;
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 24px;  
 }
 
 .storybook-page h2 {
