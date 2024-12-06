@@ -1,3 +1,5 @@
+@import url("../styles/global.css");
+
 .storybook-footer {
   position: relative;
   display: flex;
