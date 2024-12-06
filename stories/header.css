@@ -41,14 +41,14 @@
 
 .menu-bar-container {
   position: absolute; /* Fixed position */
-  bottom: 100px; /* 20px from the bottom */
+  bottom: 200px; /* 20px from the bottom */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Center horizontally */
-  width: auto; /* Adjust width as needed */
   display: flex; /* Ensure the menu bar container is a flex container */
   justify-content: center; /* Center the menu bar */
-  padding: 10px 20px; /* Add some padding */
-  background-color: none; /* Semi-transparent background */
+  padding: 0; /* Add some padding */
+  background-color: rgba(0, 0, 0, 1); /* Semi-transparent background */
   border-radius: 30px; /* Rounded corners */
   z-index: 1; /* Ensure it is above other content */
+  transition: width 0.3s ease; /* Add transition for width */
 }
