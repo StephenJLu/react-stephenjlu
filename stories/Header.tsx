@@ -73,7 +73,7 @@ export const Header = () => {
         {showTextAnim && (
           <h1 className="animated-text">
             <TextAnim baseText={baseText} trigger={showTextAnim} />
-          </h1>
+          </h1>         
         )}
         <div className={`menu-bar-container ${isSticky ? 'sticky' : ''}`} ref={menuBarRef} style={{ width: menuBarWidth }}>
           <MenuBar items={menuItems} backgroundColor="#000" />
