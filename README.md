@@ -4,6 +4,12 @@
 
 ## Changelog (including minor updates) 📆
 
+December 5, 2024 - v0.1.2 Pre-Release
+- Added menu bar scroll animation and sticky top
+- Added subtitle to header
+- Added footer text and animations
+- Consolidated animations into components
+
 December 4, 2024
 - Added active states to menu bar
 - Adjusted header fade animation
