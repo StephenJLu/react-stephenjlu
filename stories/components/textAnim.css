@@ -1,6 +1,6 @@
 @import url("../../styles/global.css");
 
-.animated-text {
+.typing-text {
   display: inline-block;
   vertical-align: top;
   line-height: 1; /* Ensure the line height is consistent */

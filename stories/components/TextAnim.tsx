@@ -4,9 +4,10 @@ import './textAnim.css';
 
 interface TextAnimProps {
   typeText: string;
+  delay?: number; // Optional delay in milliseconds
 }
 
-const TextAnim: React.FC<TextAnimProps> = ({ typeText }) => {
+const TextAnim: React.FC<TextAnimProps> = ({ typeText, delay = 1000 }) => {
   const [count, setCount] = useState(0);
   const [showText, setShowText] = useState(false);
   const textRef = useRef<HTMLSpanElement>(null);
@@ -18,7 +19,7 @@ const TextAnim: React.FC<TextAnimProps> = ({ typeText }) => {
           if (entry.isIntersecting) {
             const timer = setTimeout(() => {
               setShowText(true);
-            }, 1000); // Delay of 1 second
+            }, delay); // Delay before showing the text
 
             return () => clearTimeout(timer);
           }
@@ -53,7 +54,7 @@ const TextAnim: React.FC<TextAnimProps> = ({ typeText }) => {
     }
   }, [showText, typeText]);
 
-  return <span ref={textRef}>{typeText.slice(0, count)}</span>;
+  return <span className={'typing-text'} ref={textRef}>{typeText.slice(0, count)}</span>;
 };
 
 export default TextAnim;
