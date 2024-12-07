@@ -19,7 +19,7 @@ export const Page: React.FC = () => {
       <MenuBar items={menuItems} backgroundColor="#000" />
       <Header />
 
-      <section className="storybook-page" data-bs-theme="light">
+      <section className="storybook-page" data-bs-theme="dark">
         <h2>Pages in Storybook</h2>
         <p>
           We recommend building UIs with a{' '}

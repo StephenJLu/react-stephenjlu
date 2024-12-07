@@ -97,14 +97,6 @@
   font-style: italic;
 }
 
-.subtitle {
-  color: lightgray;
-  font-variant: small-caps;
-  font-size: 1.5rem;
-  font-weight: 300; /* Slightly weighted */
-  font-family: "AtlasGroteskLC", sans-serif;
-}
-
 .link {
   display: inline-flex;
 }

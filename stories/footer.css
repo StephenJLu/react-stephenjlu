@@ -9,7 +9,12 @@
   height: 25vh; /* Set height to 25vh */
   background-color: #000; /* Set background color to black */
   text-align: center;
-  padding: 20px; /* Add padding */
+  padding: 20px;
+  background-image: url('../static/images/starry-bg.gif');
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center center;
+  background-attachment: fixed; /* Optional: Makes the background image fixed */   /* Add padding */
 }
 
 .footer-content {
