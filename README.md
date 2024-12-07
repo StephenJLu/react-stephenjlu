@@ -5,6 +5,7 @@
 ## Changelog (including minor updates) 📆
 
 December 6, 2024
+- Added starry night animation to header background
 - Optimized active item logc in menu bar
 - Isolated menu bar animation and moved to page level
 - Fixed fonts and css reference calls
