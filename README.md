@@ -5,7 +5,6 @@
 ## Changelog (including minor updates) 📆
 
 December 7, 2024
-- Created menu button component
 - Static header image
 - Animated star field background for pages
 - Changed menu bar styling and animations
