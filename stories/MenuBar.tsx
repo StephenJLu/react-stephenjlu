@@ -1,11 +1,15 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './menuBar.css';
+import config from '../config.json';
 
 export interface MenuItem {
   /** The label of the menu item */
   label: string;
   /** Optional click handler */
   onClick?: () => void;
+  action?: string;
+  targetID?: string;
+  url?: string;
 }
 
 export interface MenuBarProps {
@@ -42,6 +46,12 @@ export const MenuBar: React.FC<MenuBarProps> = ({ items, backgroundColor, onSele
 
   useEffect(() => {
     setLocalActiveItem(activeItem || null);
+    if (activeItem) {
+      const element = document.getElementById(activeItem.toLowerCase());
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }      
   }, [activeItem]);
 
     const handleClick = (item: MenuItem) => {
@@ -52,14 +62,13 @@ export const MenuBar: React.FC<MenuBarProps> = ({ items, backgroundColor, onSele
     if (onSelect) {
       onSelect(item);
     }
-    if (item.label === 'Home') {
-      const homeElement = document.getElementById('home');
-      if (homeElement) {
-        homeElement.scrollIntoView({ behavior: 'smooth' });
+    if (item.action === 'scroll' && item.targetID) {
+      const  targetElement = document.getElementById(item.targetID);
+      if (targetElement){
+        targetElement.scrollIntoView({ behavior: 'smooth' });
       }
-    }
-    else if (item.label === 'Ledger') {
-      window.open('https://ledger.StephenJLu.com', '_blank', 'noopener,noreferrer');
+    } else if (item.action === 'open' && item.url) {
+      window.open(item.url, '_blank', 'noopener,noreferrer');
     }
   };
 
