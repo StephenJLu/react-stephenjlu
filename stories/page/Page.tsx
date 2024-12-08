@@ -15,7 +15,7 @@ export const Page: React.FC = () => {
     ...item,
     onClick: () => {
       setActiveItem(item.label);
-      setIsActive(true);                
+      setIsActive(isActive);                
     }
   }));
     return (    
