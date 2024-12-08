@@ -3,7 +3,7 @@ import TextAnim from './TextAnim';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
-  title: 'Text Type Animation',
+  title: 'Text Type',
   component: TextAnim,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout

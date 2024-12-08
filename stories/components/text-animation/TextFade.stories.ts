@@ -3,7 +3,7 @@ import TextFade from './TextFade';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
-  title: 'Text Fade Animation',
+  title: 'Text Fade',
   component: TextFade,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout

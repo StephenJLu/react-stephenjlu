@@ -14,7 +14,7 @@ const meta = {
     argTypes: {    
     activeItem: { 
       control: 'select',
-    options: ['Home', 'About', 'Services', 'Contact'],
+    options: ['Home', 'About', 'Projects', 'Contact'],
   },
 },
   
@@ -29,23 +29,3 @@ export const HomePage: Story = {
     activeItem: "Home",      
 },
 };
-
-export const AboutPage: Story = {
-  args: {    
-    activeItem: "About",      
-},
-};
-
-export const ProjectsPage: Story = {
-  args: {    
-    activeItem: "Projects",      
-},
-};
-
-export const ContactPage: Story = {
-  args: {    
-    activeItem: "Contact",      
-},
-};
-
-

@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { Header } from './Header';
-import { Footer } from './Footer';// Import the SocialMediaIcons component
-import { MenuBar } from "./MenuBar";
-import RandomBackgroundRotation from './components/Rotation';
-import '../styles/global.css';
+import { Header, Footer } from '../Stories';
+import { Rotation, MenuBar } from '../components/Components';
+import '../../styles/global.css';
 import './page.css';
-import config from "../config.json";
+import config from "../../config.json";
+import progress from './progress.mdx'
 
 
-export const Page: React.FC = () => {
+export const Page: React.FC = () => {  
   const [activeItem, setActiveItem] = useState<string>('Home');
   const [isActive, setIsActive] = useState<boolean>(true);
 
@@ -16,13 +15,12 @@ export const Page: React.FC = () => {
     ...item,
     onClick: () => {
       setActiveItem(item.label);
-      setIsActive(isActive);                
+      setIsActive(true);                
     }
   }));
-  
-  return (    
-    <div data-bs-theme="dark">
-      <RandomBackgroundRotation />
+    return (    
+    <div data-bs-theme="dark" className="scroll-container">            
+      <Rotation />
       <MenuBar
       items={menuItems}
       backgroundColor="#000"
@@ -30,11 +28,12 @@ export const Page: React.FC = () => {
       onSelect={(item) => {
        setActiveItem(item.label);
        setIsActive(true);}} 
-       />             
+       />
+       <div>         
       {activeItem === 'Home' && (
         <section>
           <Header />
-      <section className="storybook-page" id="home">
+      <section className="storybook-page container-lg" id="home">        
         <h2>Hi! This new website is still under construction. Check back soon!</h2>
         <p>
           In the meantime, you can find me at <a href="https://www.StephenJLu.com/" target='_blank' rel='noopener noreferrer'>StephenJLu.com</a> or on <a href="https://www.linkedin.com/in/stephenjlu/" target='_blank' rel='noopener noreferrer'>LinkedIn</a>.
@@ -76,6 +75,7 @@ export const Page: React.FC = () => {
       </section>
       )}
       <Footer />
+      </div>      
     </div>
   );
 };
