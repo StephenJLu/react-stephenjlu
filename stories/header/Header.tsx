@@ -1,9 +1,9 @@
 import React from "react";
-import TextAnim from "./components/TextAnim";
-import TextFade from "./components/TextFade";
-import '../styles/global.css';
+import TextAnim from "../components/text-animation/TextAnim";
+import TextFade from "../components/text-animation/TextFade";
+import '../../styles/global.css';
 import "./header.css";
-import config from "../config.json";
+import config from "../../config.json";
 
 export const Header = () => {    
   const typeText = config.name;

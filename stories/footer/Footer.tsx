@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './footer.css';
-import config from '../config.json';
-import TextAnim from "./components/TextAnim";
+import config from '../../config.json';
+import TextAnim from "../components/text-animation/TextAnim";
  
 export const Footer = () => {
     
