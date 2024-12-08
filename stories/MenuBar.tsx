@@ -48,7 +48,6 @@ export const MenuBar: React.FC<MenuBarProps> = ({ items, backgroundColor, onSele
               item={item}
               isActive={activeItem === item.label}
               onClick={handleClick}
-              onSelect={onSelect}
             />
           ))}
         </ul>

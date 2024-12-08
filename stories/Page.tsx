@@ -10,18 +10,27 @@ import config from "../config.json";
 
 export const Page: React.FC = () => {
   const [activeItem, setActiveItem] = useState<string>('Home');
+  const [isActive, setIsActive] = useState<boolean>(true);
 
   const menuItems = config.menuItems.map((item) => ({
     ...item,
     onClick: () => {
-      setActiveItem(item.label);      
+      setActiveItem(item.label);
+      setIsActive(isActive);                
     }
   }));
   
   return (    
     <div data-bs-theme="dark">
       <RandomBackgroundRotation />
-      <MenuBar items={menuItems} backgroundColor="#000" onSelect={(item) => setActiveItem(item.label)} />      
+      <MenuBar
+      items={menuItems}
+      backgroundColor="#000"
+      activeItem={activeItem}
+      onSelect={(item) => {
+       setActiveItem(item.label);
+       setIsActive(true);}} 
+       />             
       {activeItem === 'Home' && (
         <section>
           <Header />
