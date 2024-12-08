@@ -15,11 +15,11 @@ export const Page: React.FC = () => {
     ...item,
     onClick: () => {
       setActiveItem(item.label);
-      setIsActive(isActive);                
+      setIsActive(true);                
     }
   }));
     return (    
-    <div data-bs-theme="dark" className="scroll-container">
+    <div data-bs-theme="dark" className="scroll-container">            
       <Rotation />
       <MenuBar
       items={menuItems}
@@ -75,7 +75,7 @@ export const Page: React.FC = () => {
       </section>
       )}
       <Footer />
-      </div>
+      </div>      
     </div>
   );
 };

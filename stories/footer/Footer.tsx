@@ -6,9 +6,9 @@ import TextAnim from "../components/text-animation/TextAnim";
 export const Footer = () => {
     
   return (
-    <div className="storybook-footer" data-bs-theme="dark">
+    <div className="footer" data-bs-theme="dark">
       <div className="footer-content">
-        <span className="date animated-text">
+        <span className="date">
           <TextAnim typeText={`© ${new Date().getFullYear()} ${config.name}. All rights reserved.`} />            
           </span>        
       </div>

@@ -6,21 +6,23 @@ import config from "../../config.json";
 
 export const Header = () => {    
   const typeText = config.name;
-  const fadeText1 = 'Author of CSI to CEO';
-  const fadeText2 = 'Retired CSI and Forensic Firearms Examiner';
-  const fadeText3 = 'EMBA | SHRM-CP | Phi Beta Kappa';
+  const fadeText = config.roles;
+  const delay = config.delay;
 
   return (
     <header>      
       <div className="storybook-header" data-bs-theme="dark">
         <div className="header-background" />
         <h1 className="animated-text">
-          <TextAnim typeText={typeText} />
+          <TextFade fadeText={typeText} delay={delay}/>
         </h1>        
         <span className="subtitle">
-          <TextFade fadeText={fadeText1} /><br />
-          <TextFade fadeText={fadeText2} /><br />
-          <TextFade fadeText={fadeText3} /><br />
+         {fadeText.map((text, index) => (
+            <React.Fragment key={index}>
+              <TextAnim typeText={text} delay={delay}/>
+              <br />
+            </React.Fragment>
+          ))}
           </span>                
         </div>      
     </header>

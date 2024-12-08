@@ -1,6 +1,6 @@
 @import url("../../styles/global.css");
 
-.storybook-footer {
+.footer {
   position: relative;
   display: flex;
   color: var(--bs-gray-300);
@@ -28,12 +28,12 @@
   font-size: 0.6rem; 
 }
 
-.storybook-footer svg {
+.footer svg {
   display: inline-block;
   vertical-align: top;
 }
 
-.storybook-footer h1 {
+.footer h1 {
   justify-content: center;
   display: inline-block;
   vertical-align: top;
