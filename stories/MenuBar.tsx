@@ -58,6 +58,9 @@ export const MenuBar: React.FC<MenuBarProps> = ({ items, backgroundColor, onSele
         homeElement.scrollIntoView({ behavior: 'smooth' });
       }
     }
+    else if (item.label === 'Ledger') {
+      window.open('https://ledger.StephenJLu.com', '_blank', 'noopener,noreferrer');
+    }
   };
 
   return (
