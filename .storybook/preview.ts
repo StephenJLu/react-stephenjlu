@@ -1,6 +1,17 @@
 import '../styles/global.css';
 import type { Preview } from "@storybook/react";
+import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import stephenjlu from "./stephenjlu"
+
+export const decorators = [
+  withThemeByDataAttribute({
+    themes: {      
+      dark: 'dark',
+    },
+    defaultTheme: 'dark',
+    attributeName: 'data-bs-theme',
+  }),
+];
 
 const preview: Preview = {
   parameters: {    
