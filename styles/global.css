@@ -188,6 +188,6 @@ body::after {
     font-size: 2rem; /* Adjust the font-size for mobile devices */
   }  
   .subtitle {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }

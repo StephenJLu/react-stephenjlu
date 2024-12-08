@@ -2,13 +2,14 @@
 
 .storybook-header {
   position: relative;
-  display: flex;
+  display: flex-start;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #000;
   text-align: center;
+  padding-top: 100px;
   z-index: 0;
 }
 
@@ -35,20 +36,30 @@
 .storybook-header h1 {
   justify-content: center;
   position: relative; 
-  padding: 10px;
+  padding: 30px;
   font-weight: 700;
   font-size: 3rem;
   line-height: 1.2;
   color: #fff;
   width: 100%; 
-  height: 100px; 
+  height: auto; 
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 
 @media (max-width: 600px) {
   .storybook-header h1 {
     font-size: 2.5rem; /* Adjust the font-size for mobile devices */
   }
+}
+
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+  .storybook-header h1 {
+    font-size: 2rem; /* Adjust the font-size for mobile devices */
+  } 
+ 
 }

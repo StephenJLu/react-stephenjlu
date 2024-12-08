@@ -1,8 +1,8 @@
 @import url("../styles/global.css");
 
-.storybook-menu-bar {
-  display: auto;
+.storybook-menu-bar {  
   justify-content: center;
+  width: auto;
   background-color: transparent;
   align-items: center;
   padding: 10px;
@@ -11,6 +11,7 @@
 }
 
 .menu-bar-container {
+  width: 0;
   position: absolute; 
   bottom: 20%; 
   left: 50%; 
