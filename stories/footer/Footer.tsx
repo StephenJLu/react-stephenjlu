@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React from 'react';
 import './footer.css';
 import config from '../../config.json';
 import TextAnim from "../components/text-animation/TextAnim";

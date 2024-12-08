@@ -1,6 +1,5 @@
 import React from "react";
-import TextAnim from "../components/text-animation/TextAnim";
-import TextFade from "../components/text-animation/TextFade";
+import { TextAnim, TextFade } from "../components/Components";
 import '../../styles/global.css';
 import "./header.css";
 import config from "../../config.json";
