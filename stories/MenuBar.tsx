@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react';
-import '../styles/global.css';
 import './menuBar.css';
 
 export interface MenuItem {
@@ -22,25 +21,16 @@ export interface MenuBarProps {
 
 /** Primary UI component for navigation */
 export const MenuBar: React.FC<MenuBarProps> = ({ items, backgroundColor, onSelect, activeItem }) => {
-  const [menuBarWidth, setMenuBarWidth] = useState('auto');
-  const [isSticky, setIsSticky] = useState(false);
+  const [menuBarWidth, setMenuBarWidth] = useState('0vw');  
   const menuBarRef = useRef<HTMLDivElement>(null);
-  const [localactiveItem, setLocalActiveItem] = useState<string | null>(activeItem || null);
+  const [localActiveItem, setLocalActiveItem] = useState<string | null>(activeItem || null);
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     const newWidth = Math.min(98, (scrollPosition / maxScroll) * 100);
     setMenuBarWidth(`${newWidth}vw`);
-
-    if (menuBarRef.current) {
-      const menuBarTop = menuBarRef.current.getBoundingClientRect().top;
-      if (menuBarTop <= 0) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
-    }
+    
   };
 
   useEffect(() => {
@@ -54,7 +44,7 @@ export const MenuBar: React.FC<MenuBarProps> = ({ items, backgroundColor, onSele
     setLocalActiveItem(activeItem || null);
   }, [activeItem]);
 
-  const handleClick = (item: MenuItem) => {
+    const handleClick = (item: MenuItem) => {
     setLocalActiveItem(item.label);
     if (item.onClick) {
       item.onClick();
@@ -62,10 +52,16 @@ export const MenuBar: React.FC<MenuBarProps> = ({ items, backgroundColor, onSele
     if (onSelect) {
       onSelect(item);
     }
+    if (item.label === 'Home') {
+      const homeElement = document.getElementById('home');
+      if (homeElement) {
+        homeElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   };
 
   return (
-    <div className={`menu-bar-container ${isSticky ? 'sticky' : ''}`}
+    <div className={`menu-bar-container`}
       ref={menuBarRef}
       style={{ width: menuBarWidth, backgroundColor }}
       data-bs-theme="dark"
@@ -80,7 +76,7 @@ export const MenuBar: React.FC<MenuBarProps> = ({ items, backgroundColor, onSele
               type="button"
               onClick={() => handleClick(item)}
               className={`storybook-menu-bar__button ${
-                localactiveItem === item.label ? 'storybook-menu-bar__active' : ''
+                localActiveItem === item.label ? 'storybook-menu-bar__active' : ''
               }`}
             >
               {item.label}

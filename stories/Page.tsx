@@ -8,8 +8,7 @@ import './page.css';
 import config from "../config.json";
 
 
-export const Page: React.FC = () => {      
-  const baseText = config.name;
+export const Page: React.FC = () => {        
   const menuItems = config.menuItems.map((item) => ({
     ...item,
     onClick: () => eval(item.onClick)
@@ -20,7 +19,7 @@ export const Page: React.FC = () => {
       <RandomBackgroundRotation />
       <MenuBar items={menuItems} backgroundColor="#000" />
       <Header />
-      <section className="storybook-page">
+      <section className="storybook-page" id="home">
         <h2>Pages in Storybook</h2>
         <p>
           We recommend building UIs with a{' '}
