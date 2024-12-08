@@ -30,7 +30,7 @@ export const MenuBar: React.FC<MenuBarProps> = ({ items, backgroundColor, onSele
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    const newWidth = Math.min(98, (scrollPosition / maxScroll) * 150 + items.length * 7.4);
+    const newWidth = Math.min(98, (scrollPosition / maxScroll) * 100 + items.length * 7.4);
     setMenuBarWidth(`${newWidth}vw`);
 
     if (menuBarRef.current) {
