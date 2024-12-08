@@ -9,8 +9,8 @@
   height: 25vh; /* Set height to 25vh */
   background-color: #000;
   background-image:  
-                    url('../static/images/starry-bg.gif'),                      
-                    url('../static/images/starry-bg3.gif');
+                    url('../../static/images/starry-bg.gif'),                      
+                    url('../../static/images/starry-bg3.gif');
   background-size: contain;
   background-repeat: repeat;
   background-position: center center;
