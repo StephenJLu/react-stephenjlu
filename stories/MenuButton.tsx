@@ -12,19 +12,15 @@ export interface MenuItem {
 interface MenuButtonProps {
   item: MenuItem;
   isActive?: boolean;
-  onClick: (item: MenuItem) => void;
-  onSelect?: (item: MenuItem) => void;
+  onClick: (item: MenuItem) => void;  
 }
 
-const MenuButton: React.FC<MenuButtonProps> = ({ item, isActive, onSelect }) => {
+const MenuButton: React.FC<MenuButtonProps> = ({ item, isActive }) => {
   
   const handleClick = () => {
     if (item.onClick) {
       item.onClick();
-    }
-    if (onSelect) {
-      onSelect(item);
-    }
+    }    
     if (item.action === 'scroll' && item.targetID) {
       const targetElement = document.getElementById(item.targetID);
       if (targetElement) {
