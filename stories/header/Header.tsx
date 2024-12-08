@@ -13,7 +13,7 @@ export const Header = () => {
     <header>      
       <div className="storybook-header" data-bs-theme="dark">
         <div className="header-background" />
-        <h1 className="animated-text">
+        <h1>
           <TextFade fadeText={typeText} delay={delay}/>
         </h1>        
         <span className="subtitle">

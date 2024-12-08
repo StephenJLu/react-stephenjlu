@@ -18,12 +18,8 @@ body {
   background-repeat: repeat;
   background-position: center center;
   background-attachment: fixed;
-  overflow: hidden;      
-}
-
-.scroll-container {
   height: 100vh;
-  overflow-y: auto; /* Make the content scrollable */
+  overflow-y: auto;        
 }
 
 body[data-bs-theme="dark"] {
