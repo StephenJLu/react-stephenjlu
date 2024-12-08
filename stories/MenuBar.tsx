@@ -71,8 +71,7 @@ export const MenuBar: React.FC<MenuBarProps> = ({ items, backgroundColor, onSele
       data-bs-theme="dark"
       >
     <nav 
-    className={"storybook-menu-bar"}    
-    style={{ backgroundColor }}
+    className={"storybook-menu-bar"}        
     >      
       <ul className="storybook-menu-bar__list">
         {items.map((item, index) => (
