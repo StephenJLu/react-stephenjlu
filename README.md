@@ -4,6 +4,12 @@
 
 ## Changelog (including minor updates) 📆
 
+December 7, 2024
+- Static header image
+- Animated star field background for pages
+- Changed menu bar styling and animations
+- Set up "Home" page link
+
 December 6, 2024
 - Added starry night animation to header background
 - Optimized active item logc in menu bar
