@@ -27,7 +27,7 @@ export interface MenuBarProps {
 export const MenuBar: React.FC<MenuBarProps> = ({ items, backgroundColor, onSelect, activeItem }) => {
   const [menuBarWidth, setMenuBarWidth] = useState('0vw');  
   const menuBarRef = useRef<HTMLDivElement>(null);
-  const [localActiveItem, setLocalActiveItem] = useState<string | null>(activeItem || null);
+  const [localActiveItem, setLocalActiveItem] = useState<string | null>(activeItem || 'Home');
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
@@ -45,7 +45,7 @@ export const MenuBar: React.FC<MenuBarProps> = ({ items, backgroundColor, onSele
   }, []);
 
   useEffect(() => {
-    setLocalActiveItem(activeItem || null);
+    setLocalActiveItem(activeItem || 'Home');
     if (activeItem) {
       const element = document.getElementById(activeItem.toLowerCase());
       if (element) {

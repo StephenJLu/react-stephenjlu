@@ -30,4 +30,22 @@ export const HomePage: Story = {
 },
 };
 
+export const AboutPage: Story = {
+  args: {    
+    activeItem: "About",      
+},
+};
+
+export const ProjectsPage: Story = {
+  args: {    
+    activeItem: "Projects",      
+},
+};
+
+export const ContactPage: Story = {
+  args: {    
+    activeItem: "Contact",      
+},
+};
+
 

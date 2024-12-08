@@ -16,8 +16,8 @@
     },    
     {
       "label": "About",
-      "action": "",
-      "targetID": ""
+      "action": "scroll",
+      "targetID": "about"
     },
     {
       "label": "Ledger",
@@ -25,14 +25,14 @@
       "url": "https://ledger.StephenJLu.com"
     },
     {
-      "label": "Gallery",
-      "action": "",
-      "url": ""
+      "label": "Projects",
+      "action": "scroll",
+      "targetID": "projects"
     },
     {
       "label": "Contact",
-      "action": "open",
-      "url": "https://www.StephenJLu.com/contact#main"
+      "action": "scroll",
+      "targetID": "contact"
     }    
   ]
 }
