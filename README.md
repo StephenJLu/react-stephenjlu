@@ -8,7 +8,7 @@ December 7, 2024
 - Static header image
 - Animated star field background for pages
 - Changed menu bar styling and animations
-- Set up "Home" page link
+- Started set up of internal and external links
 
 December 6, 2024
 - Added starry night animation to header background

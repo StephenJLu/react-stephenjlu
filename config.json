@@ -9,10 +9,30 @@
   "repo": "https://github.com/StephenJLu/Stephenjlu/",
   "ascii": "__  __  __\n\u005C \u005C \u005C \u005C \u005C\u2215\n \u005C \u005C\u2215\u005C \u005C\n  \u005C\u2215  \u005C\u2215\n",
   "menuItems": [
-    { "label": "Home", "onClick": "console.log('Home clicked')" },
-    { "label": "About", "onClick": "console.log('About clicked')" },
-    { "label": "Ledger", "onClick": "console.log('Ledger clicked')" },
-    { "label": "Gallery", "onClick": "console.log('Gallery clicked')" },
-    { "label": "Contact", "onClick": "console.log('Contact clicked')" }
+    {
+      "label": "Home",
+      "action": "scroll",
+      "targetID": "home"
+    },    
+    {
+      "label": "About",
+      "action": "",
+      "targetID": ""
+    },
+    {
+      "label": "Ledger",
+      "action": "open",
+      "url": "https://ledger.StephenJLu.com"
+    },
+    {
+      "label": "Gallery",
+      "action": "",
+      "url": ""
+    },
+    {
+      "label": "Contact",
+      "action": "open",
+      "url": "https://www.StephenJLu.com/contact#main"
+    }    
   ]
 }
