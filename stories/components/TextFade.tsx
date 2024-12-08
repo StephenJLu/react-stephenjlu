@@ -38,7 +38,7 @@ const TextFade: React.FC<TextFadeProps> = ({ fadeText, delay = 2000 }) => {
   }, [delay]);
 
   return (
-    <span ref={textRef} className={`text-fade ${isVisible ? 'visible' : ''}`}>
+    <span ref={textRef} data-bs-theme="dark" className={`text-fade ${isVisible ? 'visible' : ''}`}>
       {fadeText}
     </span>
   );

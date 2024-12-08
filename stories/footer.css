@@ -7,14 +7,10 @@
   justify-content: center; /* Align content to the start (left) */
   align-items: flex-end; /* Align content to the end (bottom) */
   height: 25vh; /* Set height to 25vh */
-  background-color: #000; /* Set background color to black */
+  background-color: transparent; /* Set background color to black */
   text-align: center;
   padding: 20px;
-  background-image: url('../static/images/starry-bg.gif');
-  background-size: contain;
-  background-repeat: repeat;
-  background-position: center center;
-  background-attachment: fixed; /* Optional: Makes the background image fixed */   /* Add padding */
+  
 }
 
 .footer-content {

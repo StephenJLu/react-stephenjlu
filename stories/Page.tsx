@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';// Import the SocialMediaIcons component
 import { MenuBar } from "./MenuBar";
+import RandomBackgroundRotation from './components/Rotation';
 import '../styles/global.css';
 import './page.css';
 import config from "../config.json";
@@ -15,11 +16,11 @@ export const Page: React.FC = () => {
   }));
   
   return (    
-    <article>
+    <article data-bs-theme="dark">
+      <RandomBackgroundRotation />
       <MenuBar items={menuItems} backgroundColor="#000" />
       <Header />
-
-      <section className="storybook-page" data-bs-theme="dark">
+      <section className="storybook-page">
         <h2>Pages in Storybook</h2>
         <p>
           We recommend building UIs with a{' '}

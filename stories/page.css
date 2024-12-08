@@ -5,14 +5,9 @@
   padding: 48px 20px;
   max-width: 600px;
   color: var(--bs-body-color);
-  background-color: var(--bs-body-bg);
+  background-color: transparent;
   font-size: 14px;
-  line-height: 24px;
-  background-image: url('../static/images/starry-bg.gif');
-  background-size: contain;
-  background-repeat: repeat;
-  background-position: center center;
-  background-attachment: fixed; /* Optional: Makes the background image fixed */      
+  line-height: 24px;   /* Optional: Makes the background image fixed */      
 }
 
 .storybook-page h2 {

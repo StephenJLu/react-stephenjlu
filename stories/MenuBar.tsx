@@ -30,7 +30,7 @@ export const MenuBar: React.FC<MenuBarProps> = ({ items, backgroundColor, onSele
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    const newWidth = Math.min(98, (scrollPosition / maxScroll) * 150 + 30);
+    const newWidth = Math.min(98, (scrollPosition / maxScroll) * 150 + items.length * 7.4);
     setMenuBarWidth(`${newWidth}vw`);
 
     if (menuBarRef.current) {
@@ -67,7 +67,8 @@ export const MenuBar: React.FC<MenuBarProps> = ({ items, backgroundColor, onSele
   return (
     <div className={`menu-bar-container ${isSticky ? 'sticky' : ''}`}
       ref={menuBarRef}
-      style={{ width: menuBarWidth }}
+      style={{ width: menuBarWidth, backgroundColor }}
+      data-bs-theme="dark"
       >
     <nav 
     className={"storybook-menu-bar"}    

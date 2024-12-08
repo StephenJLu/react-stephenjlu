@@ -1,8 +1,12 @@
 import '../styles/global.css';
 import type { Preview } from "@storybook/react";
+import stephenjlu from "./stephenjlu"
 
 const preview: Preview = {
   parameters: {    
+    docs: {
+      theme: stephenjlu,
+    },
     actions: { },
     options: {      
       storySort: (a, b) =>

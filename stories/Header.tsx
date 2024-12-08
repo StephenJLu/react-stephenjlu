@@ -13,7 +13,7 @@ export const Header = () => {
 
   return (
     <header>      
-      <div className="storybook-header">
+      <div className="storybook-header" data-bs-theme="dark">
         <div className="header-background" />
         <h1 className="animated-text">
           <TextAnim typeText={typeText} />

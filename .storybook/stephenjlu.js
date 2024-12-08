@@ -2,7 +2,7 @@ import { create } from '@storybook/theming/create';
 import '../styles/global.css';
 
 export default create({ 
-  base: 'light', 
+  base: 'dark', 
   brandTitle: 'Stephen J. Lu',
   brandUrl: 'https://www.StephenJLu.com',
   brandImage: 'https://www.stephenjlu.com/images/SJL-logo.svg',

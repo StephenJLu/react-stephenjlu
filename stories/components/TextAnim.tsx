@@ -54,7 +54,7 @@ const TextAnim: React.FC<TextAnimProps> = ({ typeText, delay = 1000 }) => {
     }
   }, [showText, typeText]);
 
-  return <span className={'typing-text'} ref={textRef}>{typeText.slice(0, count)}</span>;
+  return <span className={'typing-text'} data-bs-theme="dark" ref={textRef}>{typeText.slice(0, count)}</span>;
 };
 
 export default TextAnim;
