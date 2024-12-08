@@ -14,14 +14,14 @@ export const Page: React.FC = () => {
   const menuItems = config.menuItems.map((item) => ({
     ...item,
     onClick: () => {
-      setActiveItem(item.label);            
-    }    
+      setActiveItem(item.label);      
+    }
   }));
   
   return (    
     <div data-bs-theme="dark">
       <RandomBackgroundRotation />
-      <MenuBar items={menuItems} backgroundColor="#000" />      
+      <MenuBar items={menuItems} backgroundColor="#000" onSelect={(item) => setActiveItem(item.label)} />      
       {activeItem === 'Home' && (
         <section>
           <Header />
