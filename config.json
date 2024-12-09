@@ -35,8 +35,8 @@
     },
     {
       "label": "Contact",
-      "action": "scroll",
-      "targetID": "contact"
+      "action": "open",
+      "url": "https://www.stephenjlu.com/contact#main"
     }    
   ]
 }
