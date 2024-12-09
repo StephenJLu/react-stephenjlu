@@ -4,6 +4,9 @@
 
 ## Changelog (including minor updates) 📆
 
+December 8, 2024
+- Added nifty character replacement animation for header (courtesy of [@HamishMW](https://github.com/HamishMW))
+
 December 7, 2024
 - Static header image
 - Animated star field background for pages
