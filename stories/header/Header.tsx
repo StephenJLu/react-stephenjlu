@@ -1,29 +1,29 @@
 import React from "react";
-import { TextAnim, TextFade } from "../components/Components";
-import '../../styles/global.css';
+import { TextAnim, TextFade, DecoderText } from "../components/Components";
 import "./header.css";
 import config from "../../config.json";
 
 export const Header = () => {    
-  const typeText = config.name;
-  const fadeText = config.roles;
+  const fadeText = config.name;
+  const codeText = config.roles;
   const delay = config.delay;
+  const asciiText = config.ascii;
 
   return (
     <header>      
       <div className="header" data-bs-theme="dark">
         <div className="header-background" />
         <h1>
-          <TextFade fadeText={typeText} delay={delay}/>
-        </h1>        
+          <TextFade fadeText={fadeText} delay={delay}/>
+        </h1>
         <span className="subtitle">
-         {fadeText.map((text, index) => (
+         {codeText.map((text, index) => (
             <React.Fragment key={index}>
-              <TextAnim typeText={text} delay={delay}/>
+              <DecoderText text={`${text}`} delay={delay} />
               <br />
             </React.Fragment>
           ))}
-          </span>                
+          </span>                                  
         </div>      
     </header>
   );
