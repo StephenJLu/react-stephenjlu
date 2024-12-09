@@ -17,9 +17,20 @@ body {
   background-size: contain;
   background-repeat: repeat;
   background-position: center center;
-  background-attachment: fixed;
+  background-attachment: fixed;              
+}
+
+.scroll-limit {
+  overflow: hidden;  
+}
+
+.scroll-limit.box {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
   height: 100vh;
-  overflow-y: auto;        
+  overflow-y: auto; /* Make the content scrollable */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
 }
 
 body[data-bs-theme="dark"] {

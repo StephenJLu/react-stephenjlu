@@ -10,23 +10,7 @@ export interface MenuBarProps {
 }
 
 export const MenuBar: React.FC<MenuBarProps> = ({ items, backgroundColor, onSelect, activeItem }) => {
-  const [menuBarWidth, setMenuBarWidth] = useState('0vw');
-  const menuBarRef = useRef<HTMLDivElement>(null);
-
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    const newWidth = Math.min(98, (scrollPosition / maxScroll) * 100);
-    setMenuBarWidth(`${newWidth}vw`);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);  
-
+    
   const handleClick = (item: MenuItem) => {
     if (onSelect) {
       onSelect(item);
@@ -35,9 +19,8 @@ export const MenuBar: React.FC<MenuBarProps> = ({ items, backgroundColor, onSele
 
   return (
     <div
-      className="menu-bar-container"
-      ref={menuBarRef}
-      style={{ width: menuBarWidth, backgroundColor }}
+      className="menu-bar-container"      
+      style={{ backgroundColor }}
       data-bs-theme="dark"
     >
       <nav className="menu-bar">

@@ -1,6 +1,7 @@
 @import url("../../../styles/global.css");
 
 .menu-button {
+  list-style: none;
   display: inline-block;
   background: none;
   border: none;

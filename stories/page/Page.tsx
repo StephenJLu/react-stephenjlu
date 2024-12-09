@@ -19,7 +19,7 @@ export const Page: React.FC = () => {
     }
   }));
     return (    
-    <div data-bs-theme="dark" className="scroll-container">            
+    <div data-bs-theme="dark" className="scroll-limit box">            
       <Rotation />
       <MenuBar
       items={menuItems}
