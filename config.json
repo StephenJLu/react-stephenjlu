@@ -16,27 +16,32 @@
     {
       "label": "Home",
       "action": "scroll",
-      "targetID": "home"
+      "targetID": "home",
+      "url": ""
     },    
     {
       "label": "About",
       "action": "scroll",
-      "targetID": "about"
+      "targetID": "about",
+      "url": ""      
     },
     {
       "label": "Ledger",
       "action": "open",
+      "targetID": "",
       "url": "https://ledger.StephenJLu.com"
     },
     {
       "label": "Projects",
       "action": "scroll",
-      "targetID": "projects"
+      "targetID": "projects",
+       "url": ""
     },
     {
       "label": "Contact",
       "action": "open",
-      "url": "https://www.stephenjlu.com/contact#main"
+      "targetID": "",
+      "url": "https://www.StephenJLu.com/contact#main"
     }    
   ]
 }
