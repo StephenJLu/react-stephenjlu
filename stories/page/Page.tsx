@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import { Header, Footer } from '../Stories';
-import { Rotation, MenuBar } from '../components/Components';
+import { Rotation, MenuBar, Header, Footer } from '../components/Components';
 import './page.css';
 import config from "../../config.json";
-import progress from './progress.mdx'
-
 
 export const Page: React.FC = () => {  
   const [activeItem, setActiveItem] = useState<string>('Home');

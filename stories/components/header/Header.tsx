@@ -1,7 +1,7 @@
 import React from "react";
-import { TextAnim, TextFade, DecoderText } from "../components/Components";
+import { TextAnim, TextFade, DecoderText } from "../Components";
 import "./header.css";
-import config from "../../config.json";
+import config from "../../../config.json";
 
 export const Header = () => {    
   const fadeText = config.name;

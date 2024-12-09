@@ -1,26 +1,12 @@
 import { useReducedMotion, useSpring } from 'framer-motion';
 import React, { memo, useEffect, useRef } from 'react';
-import { delay } from '../../utils/delay';
-import { classes } from '../../utils/style';
+import { delay } from '../../../utils/delay';
+import { classes } from '../../../utils/style';
 import { VisuallyHidden } from '../visually-hidden/visually-hidden';
 import styles from './decoder-text.module.css';
 
 const glyphs = [
-  '你', '好', '世', '界', '中',
-  '国', '人', '民', '共', '和',
-  '国', '北', '京', '上', '海',
-  '广', '州', '深', '圳', '天',
-  '津', '重', '庆', '香', '港',
-  '澳', '门', '台', '湾', '新',
-  '加', '坡', '马', '来', '西',
-  '亚', '日', '本', '韩', '国',
-  '越', '南', '泰', '国', '菲',
-  '律', '宾', '印', '度', '尼',
-  '西', '亚', '巴', '基', '斯',
-  '坦', '孟', '加', '拉', '斯',
-  '里', '兰', '卡', '阿', '富',
-  '汗', '伊', '朗', '伊', '拉',
-  '克', '叙', '利', '亚', '黎',
+  '0', '1',
 ];
 
 const CharType = {

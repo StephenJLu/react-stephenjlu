@@ -1,7 +1,7 @@
 import React from 'react';
 import './footer.css';
-import config from '../../config.json';
-import TextAnim from "../components/text-animation/TextAnim";
+import config from '../../../config.json';
+import TextAnim from "../text-animation/TextAnim";
  
 export const Footer = () => {
     

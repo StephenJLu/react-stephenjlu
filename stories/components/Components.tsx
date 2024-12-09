@@ -5,5 +5,5 @@ export { default as TextFade } from './text-animation/TextFade';
 export { MenuBar } from './menu-bar/MenuBar';
 export { default as InView } from './transitions/Transitions';
 export { DecoderText } from './decoder-text/decoder-text';
-
-
+export { Footer } from './footer/Footer';
+export { Header } from './header/Header';

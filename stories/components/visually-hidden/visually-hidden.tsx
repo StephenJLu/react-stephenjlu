@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import styles from './visually-hidden.module.css';
-import { classes } from '../../utils/style';
+import { classes } from '../../../utils/style';
 
 interface VisuallyHiddenProps {
   className?: string;
