@@ -11,7 +11,7 @@ export const Header = () => {
 
   return (
     <header>      
-      <div className="storybook-header" data-bs-theme="dark">
+      <div className="header" data-bs-theme="dark">
         <div className="header-background" />
         <h1>
           <TextFade fadeText={typeText} delay={delay}/>

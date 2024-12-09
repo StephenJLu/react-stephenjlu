@@ -12,7 +12,7 @@ const TextAnim: React.FC<TextAnimProps> = ({ typeText, delay = 0 }) => {
     const timer = setTimeout(() => {
       const interval = setInterval(() => {
         setCount((prev) => (prev < typeText.length ? prev + 1 : prev));
-      }, 100);
+      }, 50);
 
       return () => clearInterval(interval);
     }, delay);
