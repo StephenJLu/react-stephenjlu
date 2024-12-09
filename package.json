@@ -478,6 +478,7 @@
     "webpack-virtual-modules": "^0.6.2",
     "which": "^3.0.1",
     "which-typed-array": "^1.1.16",
+    "wrangler": "^3.93.0",
     "wrap-ansi": "^8.1.0",
     "wrap-ansi-cjs": "^7.0.0",
     "wrappy": "^1.0.2",
@@ -494,7 +495,7 @@
     "@storybook/addon-interactions": "^8.4.6",
     "@storybook/addon-links": "^8.4.6",
     "@storybook/addon-onboarding": "^8.4.6",
-    "@storybook/addon-themes": "8.4.6",
+    "@storybook/addon-themes": "^8.4.6",
     "@storybook/blocks": "^8.4.6",
     "@storybook/react": "^8.4.6",
     "@storybook/react-vite": "^8.4.6",
@@ -512,7 +513,7 @@
     "test": "jest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_c44f22f16f0da96"
+    "chromatic": "chromatic --exit-zero-on-changes --project-token=chpt_4ea26af67e84137"
   },
   "keywords": [],
   "author": "",

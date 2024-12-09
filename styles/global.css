@@ -20,21 +20,8 @@ body {
   background-attachment: fixed;              
 }
 
-.scroll-limit {
-  overflow: hidden;  
-}
-
-.scroll-limit.box {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow-y: auto; /* Make the content scrollable */
-  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
-}
-
 body[data-bs-theme="dark"] {
-  background-color: var(--bs-body-bg); /* Fallback background color */
+  background-color: #000; /* Fallback background color */
   background-image:  
                     url('../static/images/starry-bg.gif'),                      
                     url('../static/images/starry-bg3.gif');
@@ -65,14 +52,7 @@ body::after {
 body::after {
   transform: rotate(-45deg); /* Rotate the background image in the opposite direction */
 }
-@font-face {
-  font-family: "NotoSansSC";
-  src: url("../fonts/NotoSansSC-ExtraLight.ttf");
-  src: local("NotoSansSC ExtraLight"), local("NotoSansSC-ExtraLight"),
-    url("../fonts/NotoSansSC-ExtraLight.ttf") format("truetype");
-  font-weight: 50;
-  font-style: normal;
-}
+
 @font-face {
   font-family: "AtlasGroteskLC";
   src: url("../fonts/AtlasGroteskLC-Thin.ttf");
@@ -82,14 +62,6 @@ body::after {
   font-style: normal;
 }
 
-@font-face {
-  font-family: "NotoSansSC";
-  src: url("../fonts/NotoSansSC-Thin.ttf");
-  src: local("NotoSansSC Thin"), local("NotoSansSC-Thin"),
-    url("../fonts/NotoSansSC-Thin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
 
 @font-face {
   font-family: "AtlasGroteskLC";
@@ -100,28 +72,12 @@ body::after {
   font-style: normal;
 }
 
-@font-face {
-  font-family: "NotoSansSC";
-  src: url("../fonts/NotoSansSC-Light.ttf");
-  src: local("NotoSansSC Light"), local("NotoSansSC-Light"),
-    url("../fonts/NotoSansSC-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
 
 @font-face {
   font-family: "AtlasGroteskLC";
   src: url("../fonts/AtlasGroteskLC-Regular.ttf");
   src: local("AtlasGroteskLC Regular"), local("AtlasGroteskLC-Regular"),
     url("../fonts/AtlasGroteskLC-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "NotoSansSC";
-  src: url("../fonts/NotoSansSC-Regular.ttf");
-  src: local("NotoSansSC Regular"), local("NotoSansSC-Regular"),
-    url("../fonts/NotoSansSC-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -134,22 +90,7 @@ body::after {
   font-weight: 500;
   font-style: normal;
 }
-@font-face {
-  font-family: "NotoSansSC";
-  src: url("../fonts/NotoSansSC-Medium.ttf");
-  src: local("NotoSansSC Medium"), local("NotoSansSC-Medium"),
-    url("../fonts/NotoSansSC-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "NotoSansSC";
-  src: url("../fonts/NotoSansSC-SemiBold.ttf");
-  src: local("NotoSansSC SemiBold"), local("NotoSansSC-SemiBold"),
-    url("../fonts/NotoSansSC-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
+
 @font-face {
   font-family: "AtlasGroteskLC";
   src: url("../fonts/AtlasGroteskLC-Bold.ttf");
@@ -158,22 +99,7 @@ body::after {
   font-weight: 700;
   font-style: normal;
 }
-@font-face {
-  font-family: "NotoSansSC";
-  src: url("../fonts/NotoSansSC-Bold.ttf");
-  src: local("NotoSansSC Bold"), local("NotoSansSC-Bold"),
-    url("../fonts/NotoSansSC-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "NotoSansSC";
-  src: url("../fonts/NotoSansSC-ExtraBold.ttf");
-  src: local("NotoSansSC ExtraBold"), local("NotoSansSC-ExtraBold"),
-    url("../fonts/NotoSansSC-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-}
+
 @font-face {
   font-family: "AtlasGroteskLC";
   src: url("../fonts/AtlasGroteskLC-Black.ttf");
@@ -182,14 +108,7 @@ body::after {
   font-weight: 900;
   font-style: normal;
 }
-@font-face {
-  font-family: "NotoSansSC";
-  src: url("../fonts/NotoSansSC-Black.ttf");
-  src: local("NotoSansSC Black"), local("NotoSansSC-Black"),
-    url("../fonts/NotoSansSC-Black.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-}
+
 @font-face {
   font-family: "AtlasGroteskLC";
   src: url("../fonts/AtlasGroteskLC-ThinItalic.ttf");
