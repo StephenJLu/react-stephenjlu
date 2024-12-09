@@ -7,3 +7,4 @@ export { default as InView } from './transitions/Transitions';
 export { DecoderText } from './decoder-text/decoder-text';
 export { Footer } from './footer/Footer';
 export { Header } from './header/Header';
+export { default as InViewport } from './in-viewport/InViewport';
