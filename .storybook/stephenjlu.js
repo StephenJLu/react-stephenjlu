@@ -9,4 +9,26 @@ export default create({
   brandTarget: '_blank',
   fontBase: '"AtlasGroteskLC", sans-serif',
   fontCode: 'monospace',
+
+  //
+  colorPrimary: '#FFFFFF',
+  colorSecondary: '#222222',
+ 
+  // UI
+  appBg: '#000000',
+  appContentBg: '#000000',
+  appPreviewBg: '#000000',
+  appBorderColor: '#222222',
+  appBorderRadius: 2,
+ 
+  // Text colors
+  textColor: '#ffffff',
+  textInverseColor: '#000000',
+ 
+  // Toolbar default and active colors
+  barTextColor: '#ffffff',
+  barSelectedColor: '#ffde21',
+  barHoverColor: '#ffde21',
+  barBg: '#000000', 
+  
 });

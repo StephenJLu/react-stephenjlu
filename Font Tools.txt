@@ -1,3 +1,7 @@
 Font Tools:
 
 Conversions: npx -p @web-alchemy/fonttools pyftsubset "./fonts/AtlasGroteskLC-BoldItalic.ttf" "*" --output-file="./fonts/AGBoldItalic.woff2"  --flavor="woff2
+
+ImageMagick:
+
+magick *.png starry-bg3.gif
