@@ -479,7 +479,7 @@
     "webpack-virtual-modules": "^0.6.2",
     "which": "^3.0.1",
     "which-typed-array": "^1.1.16",
-    "wrangler": "^3.93.0",
+    "wrangler": "^3.94.0",
     "wrap-ansi": "^8.1.0",
     "wrap-ansi-cjs": "^7.0.0",
     "wrappy": "^1.0.2",
