@@ -6,7 +6,7 @@
   color: var(--bs-gray-300);
   justify-content: center; /* Align content to the start (left) */
   align-items: flex-end; /* Align content to the end (bottom) */
-  height: 25vh; /* Set height to 25vh */
+  height: 5vh; 
   background-color: transparent;  
   text-align: center;
   padding: 20px;

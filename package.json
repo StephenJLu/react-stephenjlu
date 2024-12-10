@@ -515,7 +515,7 @@
     "test": "jest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_d9ae2a670880a84"
+    "chromatic": "npx chromatic --project-token=chpt_6b667821d6b71a9"
   },
   "keywords": [],
   "author": "",
