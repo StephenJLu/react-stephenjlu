@@ -7,7 +7,7 @@
   justify-content: center; /* Align content to the start (left) */
   align-items: flex-end; /* Align content to the end (bottom) */
   height: 5vh; 
-  background-color: transparent;  
+  background-color: rgba(0, 0, 0, 1);  
   text-align: center;
   padding: 20px;
   
