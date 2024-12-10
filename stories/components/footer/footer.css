@@ -18,24 +18,10 @@
   align-items: flex-end; /* Align content to the end (bottom) */
   position: absolute;
   bottom: 20px; 
-  font-size: 0.6rem; 
+  font-size: 0.9rem; 
 }
 
 .footer svg {
   display: inline-block;
   vertical-align: top;
 }
-
-.footer h1 {
-  justify-content: center;
-  display: inline-block;
-  vertical-align: top;
-  margin: 6px 0 6px 10px;
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 1.2;
-  color: #fff;
-}
-
-
-

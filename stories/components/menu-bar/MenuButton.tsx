@@ -31,16 +31,14 @@ const MenuButton: React.FC<MenuButtonProps> = ({ item, isActive }) => {
     }
   };
   
-  return (
-    <li>
+  return (    
       <button
         type="button"
         onClick={handleClick}
         className={`menu-button${isActive ? ' active' : ''}`}
       >
         {item.label}
-      </button>
-    </li>
+      </button>    
   );
 };
 

@@ -15,7 +15,7 @@ export const Page: React.FC = () => {
     }
   }));
     return (    
-    <div data-bs-theme="dark" className="scroll-limit box">            
+    <div data-bs-theme="dark">            
       <Rotation />
       <MenuBar
       items={menuItems}
@@ -27,51 +27,54 @@ export const Page: React.FC = () => {
        />
        <div>         
       {activeItem === 'Home' && (
-        <section>
+        <>
           <Header />
-      <section className="storybook-page container-lg" id="home">        
+      <section className="page container-lg" id="home">        
         <h2>Hi! This new website is still under construction. Check back soon!</h2>
         <p>
           In the meantime, you can find me at <a href="https://www.StephenJLu.com/" target='_blank' rel='noopener noreferrer'>StephenJLu.com</a> or on <a href="https://www.linkedin.com/in/stephenjlu/" target='_blank' rel='noopener noreferrer'>LinkedIn</a>.
           </p>
       </section>
-      </section>
+      </ >
       )}
-
       {activeItem === 'About' && (
-        <section>          
-      <section className="storybook-page" id="about">
+        <>          
+      <section className="page" id="about">
+        <h1>About Me</h1>
         <h2>Hi! This new website is still under construction. Check back soon!</h2>
         <p>
           In the meantime, you can find me at <a href="https://www.StephenJLu.com/" target='_blank' rel='noopener noreferrer'>StephenJLu.com</a> or on <a href="https://www.linkedin.com/in/stephenjlu/" target='_blank' rel='noopener noreferrer'>LinkedIn</a>.
           </p>
       </section>
-      </section>
+      </ >
       )}
-
+      {activeItem === 'Ledger' && (
+        <>          
+      <section className="page">        
+        <h2>You've navigated away from the page, but I'm still here!</h2>
+      </section>
+      </ >
+      )}
       {activeItem === 'Projects' && (
-        <section>          
-      <section className="storybook-page" id="projects">
+        <>          
+      <section className="page" id="projects">
+        <h1>My Projects</h1>
         <h2>Hi! This new website is still under construction. Check back soon!</h2>
         <p>
           In the meantime, you can find me at <a href="https://www.StephenJLu.com/" target='_blank' rel='noopener noreferrer'>StephenJLu.com</a> or on <a href="https://www.linkedin.com/in/stephenjlu/" target='_blank' rel='noopener noreferrer'>LinkedIn</a>.
           </p>
       </section>
-      </section>
+      </ >
       )}
-
       {activeItem === 'Contact' && (
-        <section>          
-      <section className="storybook-page" id="contact">
-        <h2>Hi! This new website is still under construction. Check back soon!</h2>
-        <p>
-          In the meantime, you can find me at <a href="https://www.StephenJLu.com/" target='_blank' rel='noopener noreferrer'>StephenJLu.com</a> or on <a href="https://www.linkedin.com/in/stephenjlu/" target='_blank' rel='noopener noreferrer'>LinkedIn</a>.
-          </p>
+        <>          
+      <section className="page">        
+        <h2>You've navigated away from the page, but I'm still here!</h2>
       </section>
-      </section>
+      </ >
       )}
       <Footer />
-      </div>      
+      </div>           
     </div>
   );
 };

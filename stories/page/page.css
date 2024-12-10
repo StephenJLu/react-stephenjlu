@@ -1,6 +1,6 @@
 @import url("../../styles/global.css");
 
-.storybook-page {
+.page {
   margin: 0 auto;
   padding: 200px 20px 200px 20px;
   max-width: 800px;
@@ -10,62 +10,43 @@
   line-height: 24px;   /* Optional: Makes the background image fixed */      
 }
 
-.storybook-page h2 {
+.page h1 {
+  text-align: left;
+  width: 100%;
+  padding: 100px 0 50px 30px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 4px;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1;
+  
+}
+
+.page h2 {
   display: inline-block;
   vertical-align: top;
   margin: 0 0 4px;
   font-weight: 700;
   font-size: 32px;
-  line-height: 1;
+  line-height: 1.5;
 }
 
-.storybook-page p {
+.page p {
   margin: 1em 0;
+  font-size: 1rem;
 }
 
-.storybook-page a {
+.page a {
   color: var(--bs-link-color);
   text-decoration: none;
 }
 
-.storybook-page ul {
+.page ul {
   margin: 1em 0;
   padding-left: 30px;
 }
 
-.storybook-page li {
+.page li {
   margin-bottom: 8px;
-}
-
-.storybook-page .tip {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
-  border-radius: 1em;
-  background: #e7fdd8;
-  padding: 4px 12px;
-  color: #66bf3c;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 12px;
-}
-
-.storybook-page .tip-wrapper {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 13px;
-  line-height: 20px;
-}
-
-.storybook-page .tip-wrapper svg {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 3px;
-  margin-right: 4px;
-  width: 12px;
-  height: 12px;
-}
-
-.storybook-page .tip-wrapper svg path {
-  fill: #1ea7fd;
 }
