@@ -491,7 +491,7 @@
     "zwitch": "^2.0.4"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^3.2.2",
+    "@chromatic-com/storybook": "3.2.2",
     "@storybook/addon-essentials": "^8.4.6",
     "@storybook/addon-interactions": "^8.4.6",
     "@storybook/addon-links": "^8.4.6",
@@ -515,7 +515,7 @@
     "test": "jest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_af10a875a8498f1"
+    "chromatic": "npx chromatic --project-token=chpt_d9ae2a670880a84"
   },
   "keywords": [],
   "author": "",
